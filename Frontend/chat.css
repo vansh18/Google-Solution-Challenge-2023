@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;627&family=Chelsea+Market&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+*,*::after,*::before
+{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    /* min-height: 100%; */
+    /* outline: 1px solid black !important; */
+}
+body
+{
+    height: 100vh;
+    position: relative;
+    background: #BFD8FF;
+}
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+section > .left-box
+{
+    background-color: #DAE6F2;
+    flex: 1 1 30%;
+    height: 100vh;
+    height: 100svh;
+}
+.left-box img
+{
+
+    width: 120px;
+}
+section > .right-box
+{
+    background: #BFD8FF;
+    flex: 1 1 70%;
+    height: 100vh;
+    height: 100svh;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+.right-box .chat
+{
+    padding-top: 50px;
+}
+.right-box .chat p
+{
+    padding: 10px 25px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 8%),
+                inset 0 -32px 32px -32px rgb(0 0 0 / 10%);
+}
+.right-box .outgoing
+{
+    display: flex;
+}
+.outgoing .details
+{
+    margin-left: 20px;
+    margin-right: auto;
+    max-width: calc(100% -10px);
+}
+.outgoing .details p
+{
+    background: #FFFFFF;
+    color: #1B110A;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.right-box .incoming
+{
+    display: flex;
+    align-items: center;
+}
+.incoming .details
+{
+    margin-left: auto;
+     margin-right: 20px;
+}
+.incoming .details p 
+{
+    background: #FFFFFF;
+    color: #1B110A;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+
