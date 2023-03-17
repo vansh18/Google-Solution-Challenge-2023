@@ -20,9 +20,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->database();
-		$query = $this->db->query("Select * from test_table");
-		print_r( $query->result_array());
-		$this->load->view('welcome_message');
+
+		$this->load->view('chatbot.php');
+	}
+
+	public function chat()
+	{
+		$this->load->view('chatbot.php');
 	}
 }
