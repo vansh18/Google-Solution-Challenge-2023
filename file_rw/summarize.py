@@ -1,0 +1,1 @@
+# Accesess session chat, summarize full, store in jason, then clear it
