@@ -1,6 +1,7 @@
 import streamlit as st
-from langchain import PromptTemplate
-from langchain.chains import ConversationChain
+from langchain import PromptTemplate,LLMChain
+from langchain.memory import ConversationBufferWindowMemory
+#from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationEntityMemory
 from langchain.chains.conversation.prompt import ENTITY_MEMORY_CONVERSATION_TEMPLATE
 from langchain.llms import OpenAI
@@ -75,18 +76,19 @@ if 'entity_memory' not in st.session_state:
         st.session_state.entity_memory = ConversationEntityMemory(llm=llm, k=K )
     
 # Create the ConversationChain object with the specified configuration
-Conversation = ConversationChain(
-        llm=llm, 
-        prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE,
-        memory=st.session_state.entity_memory
-    ) 
+bot_chain = LLMChain(
+    llm=OpenAI(temperature=0), 
+    prompt=prompt, 
+    verbose=True, 
+    memory=ConversationBufferWindowMemory(k=K),
+)
 
 
 st.sidebar.button("New Chat", on_click = new_chat, type='primary')
 
 user_input = get_text()
 if user_input:
-    output = Conversation.run(input=user_input)  
+    output = bot_chain.predict(human_input = user_input)  
     st.session_state.past.append(user_input)
     st.session_state.generated.append(output)
 
@@ -105,4 +107,3 @@ for i, sublist in enumerate(st.session_state.stored_session):
 if st.session_state.stored_session:   
     if st.sidebar.checkbox("Clear-all"):
         del st.session_state.stored_session
-        
