@@ -159,7 +159,7 @@ header
     display: grid;
     /* justify-content: center; */
     grid-template-rows: 100px 150px;
-    grid-template-columns: 250px 250px 210px 300px;
+    grid-template-columns: 300px 300px 210px 300px;
     gap: 15px;
     margin: 10px 5% 0;
 }
@@ -199,6 +199,13 @@ header
       ),url(/images/meditate.jpg) no-repeat;
       background-size: cover;
     color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out .6s;
+}
+.box-2:hover
+{
+    transform: scale(1.05);
+    font-size: 29px;
 }
 .box-3
 {
@@ -219,6 +226,13 @@ header
       ),url(/images/habits.jpg) no-repeat;
       background-size: cover;
     color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out .6s;
+}
+.box-3:hover
+{
+    transform: scale(1.05);
+    font-size: 29px;
 }
 .box-4
 {
@@ -238,6 +252,13 @@ header
       ),url(/images/chill_music.jpg) no-repeat;
       background-size: contain;
     color: #FFFFFF;
+    cursor: pointer;
+    transition: ease-in-out .6s;
+}
+.box-4:hover
+{
+    transform: scale(1.05);
+    font-size: 29px;
 }
 .box-5
 {
