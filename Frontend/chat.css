@@ -23,7 +23,7 @@ section > .left-box
     display: flex;
     flex-direction: column;
     background-color: #DAE6F2;
-    flex: 1 1 20%;
+    flex: 1 1 18%;
     height: 100vh;
     height: 100svh;
     align-items: center;
@@ -33,28 +33,37 @@ section > .left-box
 {
     width: 120px;
 }
-.left-box .end_sessiong_button
+.left-box .buttons
 {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 10px 5%;
+  width: 100%;
 }
-.left-box .end_sessiong_button button
+.left-box .buttons .icon 
 {
-  margin: 5px;
+font-size: 18px;
+margin-right: 5px;
+}
+.left-box .buttons button
+{
+  display: flex;
+  /* margin: 5px 0px; */
   background: none;
-  padding: 5px 20px;
+  padding: 12px 20px;
   color: #1973E8;
-  border: 2px solid #1973E8;
+  /* border: 2px solid #1973E8; */
+  border: none;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: .5s ;
+  font-size: 16px;
 }
-.left-box .end_sessiong_button button:hover
+.left-box .buttons button:hover
 {
-  background: #CBDFFC;
+  background: #E5F0FF;
+  /* border-radius: 10px; */
 }
 section > .right-box
 {
@@ -62,7 +71,7 @@ section > .right-box
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    flex: 1 1 80%;
+    flex: 1 1 82%;
     height: 100vh;
     height: 100svh;
 }
