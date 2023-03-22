@@ -36,6 +36,8 @@ section > .right-box
 {
     background: #BFD8FF;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     flex: 1 1 80%;
     height: 100vh;
     height: 100svh;
@@ -47,8 +49,7 @@ section > .right-box
 .chat-box
 {
     position: relative;
-    min-height: 500px;
-    max-height: 85%;
+    flex: 1 1 90%;
     overflow-y: auto;
     padding: 10px 30px 20px 30px;
     background: #BFD8FF;
@@ -104,6 +105,11 @@ section > .right-box
 input:focus, textarea:focus, select:focus
 {
     outline: none;
+}
+.form-container
+{
+  position: relative;
+  flex: 1 1 10%;
 }
 .typing-area
 {
