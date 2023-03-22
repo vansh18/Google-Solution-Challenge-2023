@@ -21,16 +21,37 @@ section
 section > .left-box
 {
     display: flex;
+    flex-direction: column;
     background-color: #DAE6F2;
     flex: 1 1 20%;
     height: 100vh;
     height: 100svh;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .left-box img
 {
     width: 120px;
+}
+.left-box .end_sessiong_button
+{
+  position: relative;
+  margin: 10px 5%;
+}
+.left-box .end_sessiong_button button
+{
+  background: none;
+  padding: 5px 20px;
+  color: #FF6600;
+  border: 2px solid #FF6600;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .5s ;
+}
+.left-box .end_sessiong_button button:hover
+{
+  background: #ECE4E6;
 }
 section > .right-box
 {
