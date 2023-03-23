@@ -29,7 +29,7 @@ chatgpt_chain = LLMChain(
     llm=OpenAI(temperature=0), 
     prompt=prompt, 
     verbose=True, 
-    memory=ConversationBufferWindowMemory(k=K),
+    memory=ConversationBufferWindowMemory(k=K)
 )
 
 flag = 1
