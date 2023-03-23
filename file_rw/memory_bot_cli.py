@@ -39,12 +39,28 @@ chatgpt_chain = LLMChain(
 )
 
 flag = 1
+change = 0
+inp_prev = ""
+inp = "hi"
 while(flag == 1):
-    inp = str(input("User:"))
-    if(inp == "exit"):
-        print("Bye :)")
-        flag = 0
-        continue
-    else:
-        output = chatgpt_chain.predict(human_input = inp)
-        print("Hope:",output)
+    while(change == 0):
+        with open("file_rw\\input.txt", "r") as file:
+            inp = file.read().strip()
+        
+        if(inp != ""):
+            if(inp.endswith("###")):
+                if(inp != inp_prev):
+                    change = 1
+                    inp_prev = inp
+                    inp = inp.replace("###","")
+    
+                    if(inp == "exit"):
+                        print("Bye :)")
+                        flag = 0
+                        continue
+                    else:
+                        output = chatgpt_chain.predict(human_input = inp)
+                        print("Hope:",output)
+                        with open("file_rw\output.txt", 'w') as f:
+                            f.write(output+"###")
+                        change = 0
