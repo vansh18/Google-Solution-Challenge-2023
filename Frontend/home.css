@@ -157,9 +157,10 @@ header
 {
     position: relative;
     display: grid;
-    /* justify-content: center; */
     grid-template-rows: 100px 150px;
     grid-template-columns: 300px 300px 210px 300px;
+    /* grid-template-rows: 1fr 2.5fr;
+    grid-template-columns: 2fr 2fr 1fr 2fr; */
     gap: 15px;
     margin: 10px 5% 0;
 }
@@ -250,7 +251,7 @@ header
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),url(/images/chill_music.jpg) no-repeat;
-      background-size: contain;
+      background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
