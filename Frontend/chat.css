@@ -21,22 +21,55 @@ section
 section > .left-box
 {
     display: flex;
+    flex-direction: column;
     background-color: #DAE6F2;
-    flex: 1 1 20%;
+    flex: 1 1 18%;
     height: 100vh;
     height: 100svh;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .left-box img
 {
     width: 120px;
 }
+.left-box .buttons
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.left-box .buttons .icon 
+{
+font-size: 18px;
+margin-right: 5px;
+}
+.left-box .buttons button
+{
+  display: flex;
+  background: none;
+  padding: 12px 20px;
+  color: #1973E8;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .5s ;
+  font-size: 16px;
+}
+.left-box .buttons button:hover
+{
+  background: #D5E5FD;
+  /* border-radius: 10px; */
+}
 section > .right-box
 {
     background: #BFD8FF;
     overflow-y: auto;
-    flex: 1 1 80%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 82%;
     height: 100vh;
     height: 100svh;
 }
@@ -47,8 +80,7 @@ section > .right-box
 .chat-box
 {
     position: relative;
-    min-height: 500px;
-    max-height: 85%;
+    flex: 1 1 90%;
     overflow-y: auto;
     padding: 10px 30px 20px 30px;
     background: #BFD8FF;
@@ -104,6 +136,11 @@ section > .right-box
 input:focus, textarea:focus, select:focus
 {
     outline: none;
+}
+.form-container
+{
+  position: relative;
+  flex: 1 1 10%;
 }
 .typing-area
 {

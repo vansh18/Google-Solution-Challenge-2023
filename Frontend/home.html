@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="/images/LOGO_HOME.svg" alt="" srcset="" >
+                </a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Meditation</a></li>
+                <li><a href="#">Habituation</a></li>
+                <li><a href="#">Chill Music</a></li>
+            </ul>
+            <span class="action_btn">Hi, Vansh</span>
+            <div class="toggle_btn">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="dropdown_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Meditation</a></li>
+                <li><a href="#">Habituation</a></li>
+                <li><a href="#">Chill Music</a></li>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="upper_box">
+            <div class="message">
+                <div class="greetings">Good Morning, Vansh
+                    <img src="/images/icons/🦆 emoji _waving hand sign_.svg" alt="">
+                </div>
+                <p class="quote">You are the sky, Everything else is just weather.</p>
+            </div>
+            <div class="talk_to_hope"><a href="">Talk to HOPE <img src="/images/Boy.svg" alt=""></a></div>
+        </div>
+    </section>
+    <h2 class="just_for_you">Just for you :)</h2>
+        <div class="grid">
+            <div class="box box-1">
+                <p>Anxiety</p>
+                <p>Depression</p>
+                <p>Meditate</p>
+            </div>
+            <div class="box box-2">MEDITATE</div>
+            <div class="box box-3">HABITAUATION</div>
+            <div class="box box-4">CHILL MUSIC</div>
+            <div class="box box-5">
+                <h3>HOPE</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda temporibus quam quia ad. Aliquid debitis et labore, possimus provident maiores.</p>
+                <button>Let's Chat</button>
+            </div> 
+        </div>
+        <div class="buttons">
+            <button>Helpline</button>
+            <button>Contact a counsellor</button>
+        </div>
+
+
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn ion-icon')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function()
+        {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'close-outline'
+            : 'menu-outline'
+        }
+    </script>
+</body>
+</html>
