@@ -43,7 +43,7 @@ class ChatModel extends CI_Model
     {
         $file = "./data/".$filename;
         $data = json_decode(file_get_contents($file),true);
-        while(sizeof($data['chat'])>10) // passes only last 10 conversations
+        while(sizeof($data['chat'])>15) // passes only last 10 conversations
         {
             array_shift($data['chat']);
         }
