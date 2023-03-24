@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="actions">
-                        <a href="#"><ion-icon name="add-outline"></ion-icon>Add Addiction</a>
+                        <button id='add_addiction' onclick="Prompt.render('What addiction you want to add?','changeText')"><ion-icon name="add-outline"></ion-icon>Add Addiction</button>
                         <a href="#"><ion-icon name="remove-outline"></ion-icon>Remove</a>
                     </div>
                     <div class="addiction_navigation">
@@ -71,6 +71,14 @@
                 </div>
             </div>
         </div>
+        <div id="dialogoverlay"></div>
+        <div id="dialogbox">
+            <div>
+                <div id="dialogboxbody"></div>
+                <div id="dialogboxfoot"></div>
+            </div>
+        </div>
     </section>
+    <script src="habituation.js"></script>
 </body>
 </html>
