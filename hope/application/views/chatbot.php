@@ -19,14 +19,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="left-box">
             <img src="<?php echo ASSETS.'images/Logo.svg';?>" alt="">
             <div class="buttons">
-                <button type = "button"><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
+                <button type = "button" id = "clear-btn"><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
                 <button type = "button"><ion-icon name="caret-back-outline" class="icon"></ion-icon>Return</button>
                 <button type = "button"><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
             </div>
     </div>
     <div class="right-box">
         <div class="chat-box" id="main-box">
-       
+        <div class="chat outgoing">
+                    <div class="details">
+                        <p>Hi there! How are you doing today?</p>
+                    </div>
+                </div>
             
                 <!-- <div class="chat incoming">
                     <div class="details">
@@ -73,6 +77,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </section>
     <script>
+        $('#clear-btn').on('click',function(event){
+            event.preventDefault();
+            $('#main-box').html("<div class='chat outgoing'> <div class='details'><p>Hi there! How are you doing today?</p></div></div>");
+        });
         $("#input").on("keydown", function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault(); // Prevent default form submit behavior
