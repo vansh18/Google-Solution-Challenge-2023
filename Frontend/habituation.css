@@ -10,6 +10,7 @@
 body
 {
     height: 100vh;
+    background: #EAF2FF;
 }
 li
 {
@@ -20,10 +21,6 @@ a
     text-decoration: none;
     color: #1B110A;
     font-size: 1rem;
-}
-a.hover
-{
-    color: green;
 }
 .logo a img
 {
@@ -183,6 +180,7 @@ header
     background: none;
     border: none;
     cursor: pointer;
+    margin-top: 10px;
 }
 .box-2 .time_container button img
 {
