@@ -33,6 +33,8 @@ header
 {
     position: relative;
     padding: 0 2rem;
+    height: 80px;
+    overflow: visible;
 }
 
 section
@@ -163,6 +165,25 @@ form
     font-size: 13px;
     font-weight: 500;
     display: none;
+}
+.bar-1
+{
+    position: relative;
+    height: 24px;
+    width: 100%;
+    background: #5A9BFF;
+}
+.bar-2
+{
+    position: relative;
+    height: 12px;
+    width: 100%;
+    background: #1973E8;
+}
+.bar-1, .bar-2 
+{
+    position: absolute;
+    bottom: 0px;
 }
 
 
