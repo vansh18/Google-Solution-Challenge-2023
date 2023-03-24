@@ -52,6 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['get-output'] = 'welcome/get_output';
-$route['chat'] = 'welcome/call_chat';
+$route['get-output'] = 'chat/get_chat';
+$route['chat'] = 'chat/call_chat';
 $route['begin-chat'] = 'welcome/start_chat';
