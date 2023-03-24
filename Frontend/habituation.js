@@ -10,7 +10,7 @@ function CustomPrompt(){
 	    dialogbox.style.top = "100px";
 	    dialogbox.style.display = "block";
 	    document.getElementById('dialogboxbody').innerHTML = dialog;
-		document.getElementById('dialogboxbody').innerHTML += '<br><input id="prompt_value1">';
+		document.getElementById('dialogboxbody').innerHTML += '<br><input id="prompt_value1" autocomplete="off">';
 		document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Prompt.ok(\''+func+'\')">Add</button> <button onclick="Prompt.cancel()">Cancel</button>';
 	}
 	this.cancel = function(){
@@ -19,7 +19,8 @@ function CustomPrompt(){
 	}
 	this.ok = function(func){
 		var prompt_value1 = document.getElementById('prompt_value1').value;
-		window[func](prompt_value1);
+		// window[func](prompt_value1);
+        console.log(prompt_value1);
 		document.getElementById('dialogbox').style.display = "none";
 		document.getElementById('dialogoverlay').style.display = "none";
 	}
