@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="signup.css">
+    <title>SignUp</title>
 </head>
 <body>
     <header>
@@ -22,10 +22,16 @@
             <img src="/images/rocket.svg" alt="">
         </div>
         <div class="login_box">
-            <h1>Welcome Back</h1>
-            <p>We are always ready to serve you better.</p>
+            <h1>Sign Up</h1>
+            <p>Join us on the journey to better mental health. Sign up today and take the first step.</p>
             <div class="container">
-                <form onsubmit="return validateLogin()" action="" autocomplete="off">
+                <form action="" autocomplete="off">
+
+                    <div class="input_box">
+                        <span>Full Name</span>
+                        <ion-icon name="person-outline" class="icon"></ion-icon>
+                        <input type="text" name="full_name" required = "required">
+                    </div>
 
                     <div class="input_box">
                         <span>Email</span>
@@ -43,48 +49,30 @@
                     </div>
 
                     <div class="forgot_password">
-                        <a href="#">Forgot Password?</a>
-                        <a href="signup.html">Don't have an account</a>
+                        <span>Have an account?</span><a href="login.html">Login</a>
                     </div>
-                    <button type="submit" class="submit_button">Login</button>
+                    <button type="submit" class="submit_button">Get Started</button>
                     <div id="error-message" class="error-message"></div>
                 </form>
             </div>
         </div>
     </section>
-</body>
-<script>
- function changeInputType() 
- {
-  var passwordInput = document.getElementById("password_box");
-  var passwordIcon = document.getElementById("password-icon"); 
-  if (passwordInput.type === "password") 
-  {
-    passwordInput.type = "text";
-    passwordIcon.name = "eye-outline"; 
-  } 
-  else 
-  {
-    passwordInput.type = "password";
-    passwordIcon.name = "eye-off-outline"; 
-  }
-}
-function validateLogin() 
-{
-  var email = document.forms[0]["email"].value;
-  var password = document.forms[0]["password"].value;
-  if (email === "vansh.gupta850@gmail.com" && password === "password123") 
-  {
-    return true; 
-  } 
-  else 
-  {
-    var errorMessage = document.getElementById("error-message");
-    errorMessage.innerHTML = "Invalid email or password. Please try again.";
-    document.querySelector(".error-message").style.display = "block";
-    return false; 
-  }
-}
-  </script>
+        <script>
+            function changeInputType() 
+        {
+        var passwordInput = document.getElementById("password_box");
+        var passwordIcon = document.getElementById("password-icon"); 
+        if (passwordInput.type === "password") 
+        {
+            passwordInput.type = "text";
+            passwordIcon.name = "eye-outline"; 
+        } 
+        else 
+        {
+            passwordInput.type = "password";
+            passwordIcon.name = "eye-off-outline"; 
+        }
+        }
+        </script>
+    </body>
 </html>
-
