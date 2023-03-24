@@ -25,22 +25,21 @@
             <h1>Welcome Back</h1>
             <p>We are always ready to serve you better.</p>
             <div class="container">
-                <form action="">
+                <form onsubmit="return validateLogin()" action="" autocomplete="off">
 
                     <div class="input_box">
                         <span>Email</span>
                         <ion-icon name="mail-outline" class="icon"></ion-icon>
-                        <input type="text" required = "required">
+                        <input type="email" name="email" required = "required">
                     </div>
 
                     <div class="input_box">
                         <span>Password</span>
                         <div onclick="changeInputType()" id="eye" class="eye">
                             <ion-icon id="password-icon" name="eye-off-outline"></ion-icon>
-                            <!-- <ion-icon name="eye-off-outline" class="eye_off"></ion-icon> -->
                         </div>
                         <ion-icon name="key-outline" class="icon"></ion-icon>
-                        <input type="password" id="password_box" required = "required">
+                        <input type="password" name="password" id="password_box" required = "required">
                     </div>
 
                     <div class="forgot_password">
@@ -48,7 +47,7 @@
                         <a href="#">Already have an account</a>
                     </div>
                     <button type="submit" class="submit_button">Login</button>
-
+                    <div id="error-message" class="error-message"></div>
                 </form>
             </div>
         </div>
@@ -67,8 +66,25 @@
   else 
   {
     passwordInput.type = "password";
-    passwordIcon.name = "ey-off-outline"; 
+    passwordIcon.name = "eye-off-outline"; 
+  }
+}
+function validateLogin() 
+{
+  var email = document.forms[0]["email"].value;
+  var password = document.forms[0]["password"].value;
+  if (email === "vansh.gupta850@gmail.com" && password === "password123") 
+  {
+    return true; 
+  } 
+  else 
+  {
+    var errorMessage = document.getElementById("error-message");
+    errorMessage.innerHTML = "Invalid email or password. Please try again.";
+    document.querySelector(".error-message").style.display = "block";
+    return false; 
   }
 }
   </script>
 </html>
+

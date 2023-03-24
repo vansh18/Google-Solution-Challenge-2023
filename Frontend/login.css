@@ -64,6 +64,10 @@ section > .login_box
     height: calc(100vh - 80px);
     height: calc(100svh - 80px);
 }
+.login_box p
+{
+    margin: 20px 0px;
+}
 .container
 {
     height: 100%;
@@ -72,7 +76,7 @@ section > .login_box
 }
 form
 {
-    margin-top: 100px;
+    margin-top: 30px;
 }
 .input_box
 {
@@ -113,10 +117,6 @@ form
     background: none;
     cursor: pointer;
 }
-/* .input_box .eye_off
-{
-    display: none;
-} */
 .forgot_password
 {
     display: flex;
@@ -153,3 +153,16 @@ form
     background: transparent;
     color: #1973E8;
 }
+.container #error-message
+{
+    margin: 20px 0 0 0;
+    background: #EDCADA;
+    color: #FC2947;
+    padding: 10px 10px 10px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    display: none;
+}
+
+
