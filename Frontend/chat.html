@@ -95,24 +95,24 @@
         chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    var form = document.querySelector('.typing-area');
-    var input = form.querySelector('input');
+    // var form = document.querySelector('.typing-area');
+    // var input = form.querySelector('input');
 
-    form.addEventListener('submit', function(e) 
-    {
-        e.preventDefault();
-        if (input.value.trim() !== '') 
-        {
-            var chat = document.createElement('div');
-            chat.classList.add('chat', 'outgoing');
-            chat.innerHTML = '<div class="details"><p>You: ' + input.value + '</p></div>';
-            chatBox.appendChild(chat);
+    // form.addEventListener('submit', function(e) 
+    // {
+    //     e.preventDefault();
+    //     if (input.value.trim() !== '') 
+    //     {
+    //         var chat = document.createElement('div');
+    //         chat.classList.add('chat', 'incoming');
+    //         chat.innerHTML = '<div class="details"><p>You: ' + input.value + '</p></div>';
+    //         chatBox.appendChild(chat);
 
-            scrollChatBox();
+    //         scrollChatBox();
 
-            input.value = '';
-        }
-    });
+    //         input.value = '';
+    //     }
+    // });
 
 </script>
 </html>
