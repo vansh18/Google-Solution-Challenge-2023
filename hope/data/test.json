@@ -19,6 +19,62 @@
         {
             "user": "start by telling me my name",
             "hope": "\nYour name is Alan. Is there anything else I can help you with?"
+        },
+        {
+            "user": "hey",
+            "hope": "\nHey there! What can I do for you?"
+        },
+        {
+            "user": "im good im happy",
+            "hope": "\nThat's great to hear! Is there anything else I can help you with?"
+        },
+        {
+            "user": "actually im relieved",
+            "hope": "\nThat's wonderful to hear! What has been causing you relief?"
+        },
+        {
+            "user": "things feel great for me",
+            "hope": "\nThat's wonderful to hear! What has been helping you to feel great?"
+        },
+        {
+            "user": "my code finally works after hours of toiling",
+            "hope": "\nThat's great to hear! It's always rewarding when hard work pays off. Is there anything else I can help you with?"
+        },
+        {
+            "user": "Ikr fuckin amazing",
+            "hope": "\nI'm glad to hear that you're feeling so positive! Is there anything else I can help you with?"
+        },
+        {
+            "user": "im doing great",
+            "hope": "\nThat's wonderful to hear! Is there anything else I can do for you?"
+        },
+        {
+            "user": "I have had a long day today",
+            "hope": "\nI'm sorry to hear that. What has been causing you stress today?"
+        },
+        {
+            "user": "it was tiring and I lost my head today",
+            "hope": "\nI can understand how that can be stressful. What do you think has been the cause of your stress?"
+        },
+        {
+            "user": "ayo ayo wasup",
+            "hope": "\nI'm sorry, I don't understand. Could you please rephrase your question?"
+        },
+        {
+            "user": "how are you doing",
+            "hope": "\nI'm doing well, thank you for asking. How about you?"
+        },
+        {
+            "user": "they tell me you doing well",
+            "hope": "\nThat's great to hear! I'm glad to know that people are saying positive things about me. Is there anything else I can help you with?"
+        },
+        {
+            "user": "you are great",
+            "hope": "\nThank you for the kind words! Is there anything else I can help you with?"
+        },
+        {
+            "user": "I think I like yuo",
+            "hope": "\nThank you for your kind words. Is there anything else I can help you with?"
         }
     ]
 }

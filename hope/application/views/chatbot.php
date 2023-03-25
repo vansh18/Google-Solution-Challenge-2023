@@ -77,29 +77,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     </section>
     <script>
+        var chatBox = document.querySelector('.chat-box');
+        function scrollChatBox() 
+        {   
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+        window.onload = function() 
+        {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
         $('#clear-btn').on('click',function(event){
             event.preventDefault();
             $('#main-box').html("<div class='chat outgoing'> <div class='details'><p>Hi there! How are you doing today?</p></div></div>");
+            setTimeout(() => {
+                location.reload();
+            }, 1500);
         });
         $("#input").on("keydown", function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault(); // Prevent default form submit behavior
+                scrollChatBox();
                 chat();
             }
         });
-        // $("button").click(function(){
-            $(document).on('click', '#send', function(){
-                chat();
+
+        $(document).on('click', '#send', function(){
+            scrollChatBox();
+            chat();
     });
     
     function chat(){
-        // Select the chat window element
-        var chatWindow = $('#main-box');
-        // Check if the chat content exceeds the height of the chat window
-        if (chatWindow[0].scrollHeight > chatWindow.innerHeight()) {
-        // If so, scroll down to the bottom of the chat window
-        chatWindow.scrollTop(chatWindow[0].scrollHeight - chatWindow.innerHeight());
-        }
         //get input from field, validate and sanatize and make ajax call
         var input = ($("#input").val()).trim();
         input = sanitizeString(input);
@@ -124,6 +131,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             {
                 $('#main-box').append("<div class=\"chat outgoing\"> <div class=\"details\"><p>"+
                 res.msg+"</p></div></div>");
+                scrollChatBox();
             }
             else
             {

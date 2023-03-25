@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+use Orhanerday\OpenAi\OpenAi;
 class ChatModel extends CI_Model
 {
     public function get_chat_json($filename)
@@ -31,19 +32,20 @@ class ChatModel extends CI_Model
     }
     public function create_client($apikey)
     {
-        $client = OpenAI::client($apikey);
+        $client = new OpenAi($apikey);
         return $client;
     }
     function chat_completion($client,$msg)
     {
-        $response = $client->completions()->create([
+        $response = $client->completion([
             'model' => 'text-davinci-003',
             'max_tokens' => 1000,
             'prompt' => $msg,
             'temperature' => 0
         ]);
         
-        $result = $response->choices[0]->text;
+        $result_arr = json_decode($response,true);
+        $result= $result_arr['choices'][0]['text'];
         return $result;
         
     }

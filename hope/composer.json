@@ -12,10 +12,9 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"openai-php/client": "*",
 		"symfony/http-client": "*",
 		"nyholm/psr7": "*",
-		"guzzlehttp/guzzle": "*"
+		"orhanerday/open-ai": "*"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
