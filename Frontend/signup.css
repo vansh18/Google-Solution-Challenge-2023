@@ -29,6 +29,7 @@ body
     width: 100%;
     max-width: 150px;
     height: auto;
+    margin-top: 5px;
 }
   
 header 
@@ -75,6 +76,7 @@ section > .login_box
 {
     margin: 20px 0;
     width: 100%;
+    max-width: 400px;
 }
 
 .login_box h1
@@ -124,6 +126,7 @@ form
     font-size: 14px;
     font-weight: 500;
     outline: none;
+    min-width: 240px;
 }
   
 .input_box .icon 
@@ -137,7 +140,7 @@ form
 {
     width: 20px;
     position: absolute;
-    transform: translate(190px,58px);
+    transform: translate(210px,58px);
     background: none;
     cursor: pointer;
 }
@@ -186,18 +189,6 @@ form
 {
     background: transparent;
     color: #1973E8;
-}
-
-.container #error-message
-{
-    margin: 20px 0 0 0;
-    background: #EDCADA;
-    color: #FC2947;
-    padding: 10px 10px 10px 15px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 500;
-    display: none;
 }
 
 /* RESPONSIVENESS */

@@ -29,7 +29,7 @@ body
     width: 100%;
     max-width: 150px;
     height: auto;
-    /* max-height: 150px; */
+    margin-top: 5px;
 }
   
 header 
@@ -186,6 +186,7 @@ form
 .container #error-message
 {
     margin: 20px 0 0 0;
+    max-width: 260px;
     background: #EDCADA;
     color: #FC2947;
     padding: 10px 10px 10px 15px;
@@ -195,7 +196,7 @@ form
     display: none;
 }
 
-/* RESPONSIVENESS */
+/* ----- RESPONSIVENESS ----- */
 
 @media screen and (max-width: 768px) 
 {
@@ -291,4 +292,9 @@ form
         top: 33px;
         left: 10px;
     }
-  }
+    .container #error-message
+    {
+        width: 220px;
+        padding: 8px;
+    }
+}
