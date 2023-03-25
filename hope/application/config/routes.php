@@ -55,3 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['get-output'] = 'chat/get_chat';
 $route['chat'] = 'chat/call_chat';
 $route['begin-chat'] = 'welcome/start_chat';
+$route['validate-user'] = 'login/validate';
+$route['home'] = 'login';
+$route['signup'] = 'login/signup';
+$route['register-user'] = 'login/register_user';
