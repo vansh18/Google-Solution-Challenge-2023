@@ -33,32 +33,42 @@
                 </div>
                 <div class="chat outgoing">
                     <div class="details">
-                        <p>HOPE: Hi, it sounds like you're feeling a lot of anxiety about your upcoming exams. I want to assure you that you can do this! </p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>HOPE: There are a few things that you can do to help manage your anxiety around your exams. First, it is important to develop a study plan and stick to it. This will help you feel more prepared and in control. Additionally, make sure to take breaks and allow yourself time to relax.</p>
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
                     </div>
                 </div>
                 <div class="chat incoming">
                     <div class="details">
-                        <p>Thanks Hope I will follow that and will be back if I need something.</p>
+                        <p>I am worried as I have my exams in a few weeks.</p>
                     </div>
                 </div>
                 <div class="chat outgoing">
                     <div class="details">
-                        <p>HOPE: Always a pleasure Vansh. Let me know if you need something.</p>
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
                     </div>
                 </div>
                 <div class="chat incoming">
                     <div class="details">
-                        <p>That's all for now. Bye!</p>
+                        <p>I am worried as I have my exams in a few weeks.</p>
                     </div>
                 </div>
                 <div class="chat outgoing">
                     <div class="details">
-                        <p>HOPE: Bye Vansh, Have a nice day.</p>
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
+                    </div>
+                </div>
+                <div class="chat incoming">
+                    <div class="details">
+                        <p>I am worried as I have my exams in a few weeks.</p>
+                    </div>
+                </div>
+                <div class="chat outgoing">
+                    <div class="details">
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
+                    </div>
+                </div>
+                <div class="chat incoming">
+                    <div class="details">
+                        <p>I am worried as I have my exams in a few weeks.</p>
                     </div>
                 </div>
             </div>
@@ -71,4 +81,38 @@
         </div>
     </section>
 </body>
+<script>
+    window.onload = function() 
+    {
+        var chatBox = document.querySelector('.chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    var chatBox = document.querySelector('.chat-box');
+
+    function scrollChatBox() 
+    {
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    var form = document.querySelector('.typing-area');
+    var input = form.querySelector('input');
+
+    form.addEventListener('submit', function(e) 
+    {
+        e.preventDefault();
+        if (input.value.trim() !== '') 
+        {
+            var chat = document.createElement('div');
+            chat.classList.add('chat', 'outgoing');
+            chat.innerHTML = '<div class="details"><p>You: ' + input.value + '</p></div>';
+            chatBox.appendChild(chat);
+
+            scrollChatBox();
+
+            input.value = '';
+        }
+    });
+
+</script>
 </html>

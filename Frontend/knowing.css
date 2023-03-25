@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans';
-    outline: 1px solid black !important;
+    /* outline: 1px solid black !important; */
 }
   
 body 
@@ -45,6 +45,11 @@ header
 {
     text-align: center;
     color: #1B110A;
+}
+
+.info-message h1
+{
+    font-size: 28px;
 }
 
 .info-message p
@@ -109,6 +114,7 @@ header
     font-weight: 500;
     transition: .3s ease-in-out;
     cursor: pointer;
+    border: 2px solid #1973E8;
 }
 
 .button button:hover
