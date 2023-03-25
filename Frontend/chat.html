@@ -11,7 +11,11 @@
 </head>
 <body>
     <section>
+
         <div class="left-box">
+            <div class="close-button">
+                <ion-icon name="close-outline" id="close-icon"></ion-icon>
+            </div>
             <img src="/Images/Logo.svg" alt="">
             <div class="buttons">
                 <button><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
@@ -19,6 +23,14 @@
                 <button><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
             </div>
         </div>
+        
+        <div class="mob-header">
+            <div class="toggle_btn">
+                <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
+            </div>
+            <img src="/images/LOGO_HOME.svg" alt="">
+        </div>
+
         <div class="right-box">
             <div class="chat-box">
                 <div class="chat outgoing">
@@ -68,10 +80,11 @@
                 </div>
                 <div class="chat incoming">
                     <div class="details">
-                        <p>I am worried as I have my exams in a few weeks.</p>
+                        <p>I am worried as I have my exams in a few weeks. test test</p>
                     </div>
                 </div>
             </div>
+
             <div class="form-container">
                 <form action="#" class="typing-area">
                     <input type="text" placeholder="">
@@ -80,6 +93,7 @@
             </div>
         </div>
     </section>
+
 </body>
 <script>
     window.onload = function() 
@@ -95,24 +109,23 @@
         chatBox.scrollTop = chatBox.scrollHeight;
     }
 
-    // var form = document.querySelector('.typing-area');
-    // var input = form.querySelector('input');
+    var menu_icon = document.getElementById("menu-icon");
+    var close_icon = document.getElementById("close-icon");
 
-    // form.addEventListener('submit', function(e) 
-    // {
-    //     e.preventDefault();
-    //     if (input.value.trim() !== '') 
-    //     {
-    //         var chat = document.createElement('div');
-    //         chat.classList.add('chat', 'incoming');
-    //         chat.innerHTML = '<div class="details"><p>You: ' + input.value + '</p></div>';
-    //         chatBox.appendChild(chat);
-
-    //         scrollChatBox();
-
-    //         input.value = '';
-    //     }
-    // });
+    menu_icon.addEventListener("click", function() 
+        {
+            if (menu_icon.name == "menu-outline") 
+            {
+                document.querySelector(".left-box").style.display = "flex";
+            }
+        });
+    close_icon.addEventListener("click", function() 
+    {
+        if (close_icon.name == "close-outline") 
+        {
+            document.querySelector(".left-box").style.display = "none";
+        }
+    });
 
 </script>
 </html>
