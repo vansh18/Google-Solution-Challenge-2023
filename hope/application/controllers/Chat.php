@@ -14,11 +14,10 @@ class Chat extends CI_Controller {
     {
         $msg = $_POST['input'];
         if(!file_exists("./data/test.json"))
-            $this->ChatModel->encode_chat_json("Hi","","test.json"); 
-        else
-            $this->ChatModel->encode_chat_json($msg,"","test.json");
+            $this->ChatModel->encode_chat_json("Hi","Hi there! How are you doing today?","test.json"); 
+            // $this->ChatModel->encode_chat_json($msg,"","test.json");
         $data  = $this->ChatModel->get_chat_json("test.json");
-        $template = $this->ChatModel->create_template($data);
+        $template = $this->ChatModel->create_template($data,$msg);
         $result = ($this->ChatModel->chat_completion($this->client,$template));
         $this->ChatModel->encode_chat_json($msg,$result,"test.json");
         $data = array('status' => 200, 'msg' => $result);

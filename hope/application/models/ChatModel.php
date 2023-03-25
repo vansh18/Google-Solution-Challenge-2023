@@ -13,7 +13,7 @@ class ChatModel extends CI_Model
         }
         return $data['chat'];
     }
-    public function create_template($chat_arr)
+    public function create_template($chat_arr,$input)
     {
         $chat = "";
         foreach($chat_arr as $convo)
@@ -25,8 +25,8 @@ class ChatModel extends CI_Model
         Hope will converse with the user and help the user to overcome their mental health problems. Hope is very experienced and keeps in mind previous conversations made with the user.
         User will share their thoughts and problems with Hope and Hope will try and solve them by Cognitive Behavioural Therapy.
         Hope can help users who struggle with anxiety, depression, trauma, sleep disorder, relationships, work-stress, exam-stress and help them.
-        Hope may also suggest breathing exercises or simple tasks or any other conventional methods that may help the User.%s
-        ",$chat);
+        Hope may also suggest breathing exercises or simple tasks or any other conventional methods that may help the User.%s\nUser:%s\nHope:
+        ",$chat,$input);
         return $template;
     }
     public function create_client($apikey)
