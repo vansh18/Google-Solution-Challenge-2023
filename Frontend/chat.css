@@ -202,7 +202,7 @@ input:focus, textarea:focus, select:focus
   section >.left-box
   {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     width: 60%;
     flex: revert;
