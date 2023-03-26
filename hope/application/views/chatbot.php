@@ -17,13 +17,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
     <section>
     <div class="left-box">
-            <img src="<?php echo ASSETS.'images/Logo.svg';?>" alt="">
+            <div class="close-button">
+                 <ion-icon name="close-outline" id="close-icon"></ion-icon>
+             </div>
+            <img src="<?php echo ASSETS.'images/LOGO.svg';?>" alt="">
             <div class="buttons">
                 <button type = "button" id = "clear-btn"><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
                 <button type = "button"><ion-icon name="caret-back-outline" class="icon"></ion-icon>Return</button>
                 <button type = "button"><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
             </div>
     </div>
+    <div class="mob-header">
+             <div class="toggle_btn">
+                 <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
+             </div>
+             <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="">
+    </div>
+
     <div class="right-box">
         <div class="chat-box" id="main-box">
         <div class="chat outgoing">
@@ -68,16 +78,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div> -->
             </div>
+        <div class="form-container">
             <form class="typing-area">
                 <input type="text" placeholder="Send a message" id="input"/>
                 <input type="hidden" name="chat" value = />
                 <button type="button" id="send"><ion-icon name="send-outline"></ion-icon></button>
             </form>
         </div>
+        </div>
 
     </section>
     <script>
+        var menu_icon = document.getElementById("menu-icon");
+        var close_icon = document.getElementById("close-icon");
         var chatBox = document.querySelector('.chat-box');
+        menu_icon.addEventListener("click", function() 
+        {
+            if (menu_icon.name == "menu-outline") 
+            {
+                document.querySelector(".left-box").style.display = "flex";
+            }
+        });
+        close_icon.addEventListener("click", function() 
+        {
+            if (close_icon.name == "close-outline") 
+            {
+                document.querySelector(".left-box").style.display = "none";
+            }
+        });
         function scrollChatBox() 
         {   
             chatBox.scrollTop = chatBox.scrollHeight;

@@ -6,7 +6,7 @@
     padding: 0; 
     box-sizing: border-box;
     font-family: 'Open Sans';
-    /* outline: 1px solid black !important; */
+    outline: 1px solid black !important;
 }
 body
 {
@@ -215,14 +215,14 @@ input:focus, textarea:focus, select:focus
 
   .close-button
   {
-    display: block;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    width: 100%;
   }
 
   #close-icon
   {
-    position: absolute;
-    left: 180px;
-    top: 20px;
     font-size: 60px;
     color: #1973E8;
   }
