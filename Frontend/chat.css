@@ -269,6 +269,8 @@ input:focus, textarea:focus, select:focus
   {
     overflow-y: auto;
     margin-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
     height: calc(100vh - 160px);
   }
 
@@ -282,6 +284,26 @@ input:focus, textarea:focus, select:focus
     color: #000;
     left: 10px;
     z-index: 100;
+  }
+
+  .outgoing
+  {
+    width: 100%;
+  }
+
+  .outgoing .details
+  {
+    width: 250px;
+  }
+
+  .incoming
+  {
+    width: 100%;
+  }
+
+  .incoming .details
+  {
+    width: 250px;
   }
 
 }

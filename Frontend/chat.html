@@ -127,5 +127,14 @@
         }
     });
 
+
+    window.addEventListener('resize', function() 
+    {
+        if (document.activeElement.tagName == 'text-area') 
+        {
+            var chatBox = document.querySelector('.chat-box');
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    });
 </script>
 </html>
