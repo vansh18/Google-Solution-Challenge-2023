@@ -194,11 +194,6 @@ header
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),url(/images/meditate.jpg) no-repeat;
-    background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
@@ -221,11 +216,6 @@ header
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),url(/images/habits.jpg) no-repeat;
-      background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
@@ -247,11 +237,6 @@ header
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),url(/images/chill_music.jpg) no-repeat;
-      background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
