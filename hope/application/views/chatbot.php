@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
         $('#clear-btn').on('click',function(event){
             event.preventDefault();
-            $('#main-box').html("<div class='chat outgoing'> <div class='details'><p>Hi there! How are you doing today?</p></div></div>");
+            $('#main-box').html("<div class='chat outgoing'> <div class='details'><p>Good Bye:)</p></div></div>");
             setTimeout(() => {
                 location.reload();
             }, 1500);

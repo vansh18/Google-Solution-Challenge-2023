@@ -6,3 +6,4 @@ hope/application/models/output.txt
 hope/application/key.txt
 hope/data/test.json
 .DS_Store
+hope/data

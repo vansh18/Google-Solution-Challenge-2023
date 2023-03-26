@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="talk_to_hope"><a href="<?php echo BASE_URL."chat";?>">Talk to HOPE <img src="<?php echo ASSETS.'images/Boy.svg';?>" alt=""></a></div>
         </div>
     </section>
-    <h2 class="just_for_you">Just for you :)</h2>
+    <h2 class="just_for_you">Just for you &#58&#41</h2>
         <div class="grid">
             <div class="box box-1">
                 <p>Anxiety</p>
