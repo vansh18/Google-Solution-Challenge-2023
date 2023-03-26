@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
     <section>
+
     <div class="left-box">
             <div class="close-button">
                  <ion-icon name="close-outline" id="close-icon"></ion-icon>
@@ -23,61 +24,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <img src="<?php echo ASSETS.'images/LOGO.svg';?>" alt="">
             <div class="buttons">
                 <button type = "button" id = "clear-btn"><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
-                <button type = "button"><ion-icon name="caret-back-outline" class="icon"></ion-icon>Return</button>
+                <button type = "button" onclick="window.location.href = '<?php echo BASE_URL.'home';?>';"><ion-icon name="caret-back-outline" class="icon"></ion-icon>Return</button>
                 <button type = "button"><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
             </div>
-    </div>
-    <div class="mob-header">
-             <div class="toggle_btn">
-                 <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
-             </div>
-             <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="">
-    </div>
+        </div>
+
+        <div class="mob-header">
+                 <div class="toggle_btn">
+                     <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
+                 </div>
+                 <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="">
+        </div>
 
     <div class="right-box">
         <div class="chat-box" id="main-box">
-        <div class="chat outgoing">
-                    <div class="details">
-                        <p>Hi there! How are you doing today?</p>
-                    </div>
+            <div class="chat outgoing">
+                <div class="details">
+                    <p>Hi there! How are you doing today?</p>
                 </div>
-            
-                <!-- <div class="chat incoming">
-                    <div class="details">
-                        <p>I am worried as I have my exams in a few weeks.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>HOPE: Hi, it sounds like you're feeling a lot of anxiety about your upcoming exams. I want to assure you that you can do this! </p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>HOPE: There are a few things that you can do to help manage your anxiety around your exams. First, it is important to develop a study plan and stick to it. This will help you feel more prepared and in control. Additionally, make sure to take breaks and allow yourself time to relax.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <div class="details">
-                        <p>Thanks Hope I will follow that and will be back if I need something.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>HOPE: Always a pleasaure Vansh. Let me know if you need something.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <div class="details">
-                        <p>That's all for now. Bye!</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>HOPE: Bye Vansh, Have a nice day.</p>
-                    </div>
-                </div> -->
             </div>
+        </div>
+
         <div class="form-container">
             <form class="typing-area">
                 <input type="text" placeholder="Send a message" id="input"/>
@@ -85,9 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <button type="button" id="send"><ion-icon name="send-outline"></ion-icon></button>
             </form>
         </div>
-        </div>
-
-    </section>
+    </div>
+</section>
     <script>
         var menu_icon = document.getElementById("menu-icon");
         var close_icon = document.getElementById("close-icon");

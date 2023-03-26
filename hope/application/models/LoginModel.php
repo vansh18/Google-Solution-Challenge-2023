@@ -50,4 +50,9 @@ class LoginModel extends CI_Model
         $_SESSION['status'] = 'loggedin';
         // echo 'Session Successfully Created';
     }
+    public function destroy_session()
+    {
+        session_unset();
+        session_destroy();
+    }
 }
