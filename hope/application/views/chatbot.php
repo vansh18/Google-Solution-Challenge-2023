@@ -144,6 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var post_data = {'input':input};
         $("#input").val(""); //clear input field content
         console.log(input); 
+        scrollChatBox();
         $('#main-box').append('<div class="chat incoming"> <div class="details"><p>'+
         input+'</p></div></div>');
         //ajax call to send input to controller

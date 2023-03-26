@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="home.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="<?php echo ASSETS.'css/home.css';?>">
+    <title>Home</title>
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
                 <a href="#">
-                    <img src="/images/LOGO_HOME.svg" alt="" srcset="" >
+                    <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="" srcset="" >
                 </a>
             </div>
             <ul class="links">
@@ -39,11 +42,11 @@
         <div class="upper_box">
             <div class="message">
                 <div class="greetings">Good Morning, Vansh
-                    <img src="/images/icons/🦆 emoji _waving hand sign_.svg" alt="">
+                    <img src="<?php echo ASSETS.'images/icons/🦆 emoji _waving hand sign_.svg';?>" alt="">
                 </div>
                 <p class="quote">You are the sky, Everything else is just weather.</p>
             </div>
-            <div class="talk_to_hope"><a href="chat.html">Talk to HOPE <img src="/images/Boy.svg" alt=""></a></div>
+            <div class="talk_to_hope"><a href="chat.html">Talk to HOPE <img src="<?php echo ASSETS.'images/Boy.svg';?>" alt=""></a></div>
         </div>
     </section>
     <h2 class="just_for_you">Just for you :)</h2>

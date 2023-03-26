@@ -197,7 +197,7 @@ header
     background: linear-gradient(
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
-      ),url(/images/meditate.jpg) no-repeat;
+      ),url(./Google-Solution-Challenge-2023/hope/assets/images/meditate.jpg) no-repeat;
     background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
@@ -224,7 +224,7 @@ header
     background: linear-gradient(
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
-      ),url(/images/habits.jpg) no-repeat;
+      ),url(./Google-Solution-Challenge-2023/hope/assets/images/habits.jpg) no-repeat;
       background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
@@ -250,7 +250,7 @@ header
     background: linear-gradient(
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
-      ),url(/images/chill_music.jpg) no-repeat;
+      ),url(./Google-Solution-Challenge-2023/hope/assets/images/chill_music.jpg) no-repeat;
       background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
