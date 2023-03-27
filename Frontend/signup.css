@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans';
+    /* outline: 1px solid black; */
 }
   
 body 
@@ -87,6 +88,8 @@ section > .login_box
 
 .container 
 {
+    position: relative;
+    top: -25px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -109,6 +112,8 @@ form
   
 .input_box span 
 {
+    position: relative;
+    top: 10px;
     margin: 5px 0 0 0;
     font-weight: 600;
     font-family: 'Open Sans';
