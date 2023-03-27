@@ -196,7 +196,7 @@ form
     color: #1973E8;
 }
 
-/* RESPONSIVENESS */
+/* ----- RESPONSIVENESS ----- */
 
 @media screen and (max-width: 768px) 
 {
@@ -246,7 +246,7 @@ form
     .rocket img 
     {
       width: 300px;
-      height: 240px;
+      height: 180px;
     }
     
     section > .login_box 

@@ -90,8 +90,7 @@ section .content
     display: flex;
     flex-direction: column;
     flex: 1 1 50%;
-    justify-content: center;
-    /* height: calc(100vh - 80px); */
+    justify-content: flex-start;
     margin-top: 100px;
 }
 
@@ -162,4 +161,118 @@ section > .image
     flex: 1 1 50%;
     align-items: center;
     justify-content: center;
+    padding: 30px 0;
+}
+
+.image img
+{
+    width: 400px;
+    height: 400px;
+}
+
+/*  ----- RESPONSIVENESS ----- */
+
+@media only screen and (max-width: 500px) 
+{
+
+    .logo a img
+    {
+        width: 120px;
+        height: 60px;
+    }
+    section
+    {
+        width: 100%;
+    }
+
+    section .content
+    {
+        margin: 10px;
+    }
+
+    section .image
+    {
+        padding: 0;
+    }
+
+    section .image img
+    {
+        width: 350px;
+        height: 350px;
+    }
+
+    .buttons
+    {
+        display: none;
+    }
+
+    .button
+    {
+        display: none;
+    }
+
+    .content .msg
+    {
+        margin-left: 0;
+        font-size: 14px;
+        width: 220px;
+    }
+
+    .content .heading
+    {
+        font-size: 20px;
+        margin: 5px 0 0 0;
+    }
+    
+    .content .para
+    {
+        margin: 5px 0 0 0;
+    }
+    
+    .mob-buttons
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .mob-buttons a
+    {
+        color: #FFFFFF;
+        text-align: center;
+        text-decoration: none;
+        background: #1973E8;
+        margin: 0px 10px 0 0;
+        padding: 8px 10px;
+        width: 110px;
+        border: 3px solid #1973E8;
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: .3s ease-in-out;
+    }
+    
+    .mob-buttons a:hover
+    {
+        background: #FFFFFF;
+        color: #1973E8;
+    }
+    
+    .mob-buttons #login
+    {
+        background: none;
+        border: 3px solid #1973E8;
+        color: #1973E8;
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .mob-buttons #login:hover
+    {
+        background: #1973E8;
+        color: #FFFFFF;
+    }
 }
