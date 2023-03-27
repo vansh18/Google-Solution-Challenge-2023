@@ -27,7 +27,6 @@ class LoginModel extends CI_Model
         //     // Handle the error caused by inserting duplicate values
         //     echo 'email already exists';
         // }
-
         try {
             $this->db->insert("User_Data", $details);   
         } catch (Exception $e) {
@@ -37,5 +36,23 @@ class LoginModel extends CI_Model
                 echo 'Error: ' . $e->getMessage();
             }
         }
+    }
+    public function create_session($email)
+    {
+        $_SESSION['email'] = $email;
+        $this->db->select('username,user_id');
+        $this->db->from('User_Data');
+        $this->db->where('email',$email);
+        $query=$this->db->get();
+        $result=$query->row_array();
+        $_SESSION['name'] = $result['username'];
+        $_SESSION['userid'] = $result['user_id'];
+        $_SESSION['status'] = 'loggedin';
+        // echo 'Session Successfully Created';
+    }
+    public function destroy_session()
+    {
+        session_unset();
+        session_destroy();
     }
 }

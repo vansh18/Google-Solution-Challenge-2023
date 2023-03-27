@@ -10,8 +10,14 @@ class Login extends CI_Controller {
 		$this->load->model('LoginModel');
     }
     public function index()
-    {
-        $this->load->view('login_view.php');
+    {   
+        if(!isset($_SESSION['userid']))
+            $this->load->view('login_view.php');
+        else
+        {
+            // echo 'Already logged in';
+            redirect('home');// redirect if user already logged in
+        }
     }
     public function signup()
     {
@@ -20,7 +26,10 @@ class Login extends CI_Controller {
     public function validate()
     {
         if($this->LoginModel->validate($_POST['email'],$_POST['password']))
+        {
             $response = array('status' => 200,'success' => true);
+            $this->LoginModel->create_session($_POST['email']);// create session once user data validated
+        }
         else    
             $response = array('status' => 200,'success' => false);
        echo json_encode($response);
