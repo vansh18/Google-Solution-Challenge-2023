@@ -59,3 +59,4 @@ $route['validate-user'] = 'login/validate';
 $route['home'] = 'home';
 $route['signup'] = 'login/signup';
 $route['register-user'] = 'login/register_user';
+$route['test'] = 'test';

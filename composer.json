@@ -1,5 +1,2 @@
 {
-    "require": {
-        "google/cloud-storage": "^1.30"
-    }
 }
