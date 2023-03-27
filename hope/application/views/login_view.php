@@ -105,6 +105,8 @@ $('#login-form').submit(function(event) {
             },
             error: function() {
                 // Handle any errors that occur during the Ajax call
+                $('#error-message').text("Invalid email or password. Please try again."); // Display error message
+                $(".error-message").css("display", "block");
                 console.log("Error occurred during Ajax call");
             },
             dataType: "json"

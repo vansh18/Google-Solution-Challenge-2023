@@ -82,6 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $('.submit_button').on('click',function (event) {
             event.preventDefault();
             $("#error-message").html("");
+            $("#error-message").css("display", "block");// show error message div
             var validate = true;
             var form = $("#signup-form");
             var name = $("#name_box").val();
@@ -122,7 +123,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 form.submit(); // jQuery
             }
             else{
-                $(".error-message").css("display", "block");// show error message div
+                $("#error-message").css("display", "block");// show error message div
             }
             if (window.history.replaceState) {
                 window.history.replaceState(null, null, window.location.href);
