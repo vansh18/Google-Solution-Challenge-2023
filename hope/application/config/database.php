@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '34.100.159.95',
+	'hostname' => '127.0.0.1:4000',
 	'username' => 'root',
 	'password' => 'hope_cbt@2023',
 	'database' => 'hopedb',
