@@ -77,6 +77,16 @@ class ChatModel extends CI_Model
             file_put_contents($file,json_encode($data,JSON_PRETTY_PRINT));
         }
     }
+
+    public function write_file($filename,$content)
+    {
+        return file_put_contents($filename,$content);
+    }
+    public function delete_file($filename)
+    {
+        $file = "./data/".$filename;
+        return unlink($file); // deletes file (returns false if failed)
+    }
 }   
 
 ?>

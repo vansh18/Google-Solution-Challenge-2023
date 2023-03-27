@@ -12,16 +12,29 @@ class Login extends CI_Controller {
     public function index()
     {   
         if(!isset($_SESSION['userid']))
+            $this->load->view('landing_view.php');
+        else
+        {
+            redirect('home');// redirect if user already logged in
+        }
+    }
+    public function user_login()
+    {
+        if(!isset($_SESSION['userid']))
             $this->load->view('login_view.php');
         else
         {
-            // echo 'Already logged in';
             redirect('home');// redirect if user already logged in
         }
     }
     public function signup()
     {
-        $this->load->view('signup_view.php');
+        if(!isset($_SESSION['userid']))
+            $this->load->view('signup_view.php');
+        else
+        {
+            redirect('home');// redirect if user already logged in
+        }
     }
     public function validate()
     {

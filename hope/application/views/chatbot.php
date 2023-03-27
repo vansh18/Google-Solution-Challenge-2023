@@ -80,13 +80,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         {
             chatBox.scrollTop = chatBox.scrollHeight;
         }
-        $('#clear-btn').on('click',function(event){
-            event.preventDefault();
-            $('#main-box').html("<div class='chat outgoing'> <div class='details'><p>Good Bye:)</p></div></div>");
-            setTimeout(() => {
-                location.reload();
-            }, 1500);
+        $(document).ready(function() {
+        // Your code here
+        $.ajax({
+        type: "POST",
+        url: "<?php echo BASE_URL."get-file"; ?>",
+        success: function(response) {
+            // Handle the response from the PHP function
+            console.log(response);
+            var res = (JSON.parse(response));
+            if(res.status == 200)
+            {
+               console.log("File downloaded");
+            }
+            else
+            {
+                console.log("Error");
+            }
+        },
+        error: function() {
+            // Handle any errors that occur during the Ajax call
+            console.log("Error occurred during Ajax call");
+            }
         });
+        });
+
         $("#input").on("keydown", function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault(); // Prevent default form submit behavior
@@ -125,7 +143,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             if(res.status == 200)
             {
                 $('#main-box').append("<div class=\"chat outgoing\"> <div class=\"details\"><p>"+
-                res.msg+"</p></div></div>");
+                (res.msg).replace("\n","<br>")+"</p></div></div>");
                 scrollChatBox();
             }
             else
@@ -152,6 +170,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         return sanitizedString;
     }
+    $('#clear-btn').on('click',function(event){
+            event.preventDefault();
+            $('#main-box').html("<div class='chat outgoing'> <div class='details'><p>Good Bye:)</p></div></div>");
+            // ajax call to upload chat
+            $.ajax({
+                type: "POST",
+                url: "<?php echo BASE_URL."upload-file"; ?>",
+                success: function(response) {
+                    // Handle the response from the PHP function
+                    console.log(response);
+                    var res = (JSON.parse(response));
+                    if(res.status == 200)
+                    {
+                        console.log("Session ended, file uplaoded!");
+                    }
+                    else
+                    {
+                        console.log("Error");
+                    }
+                },
+                error: function() {
+                    // Handle any errors that occur during the Ajax call
+                    console.log("Error occurred during file upload Ajax call");
+                    }
+            });
+
+            // setTimeout(() => {
+            //     location.reload();
+            // }, 1500);
+        });
+
+    $(window).on('beforeunload', function() {
+    var url = '<?php echo BASE_URL."upload-file"; ?>';
+    navigator.sendBeacon(url);
+    });
 // });
     </script>
 </body>

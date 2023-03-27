@@ -80,5 +80,36 @@ class gcp_config extends CI_Model
             // NOTE: if $object->name() ends with '/' then it is a 'folder'
         }
     }
+    function downloadFile(string $bucketName, string $objectName, string $destination)
+    {
+        $privateKeyFileContent = file_get_contents("./application/storage_cred.json") or die('cred file not found!');
+        // connect to Google Cloud Storage using private key as authentication
+        try {
+            $storage = new StorageClient([
+                'keyFile' => json_decode($privateKeyFileContent, true)
+            ]);
+        } catch (Exception $e) {
+            // maybe invalid private key ?
+            print $e;
+            // return false;
+        }
+        $bucket = $storage->bucket($bucketName);
+        $object = $bucket->object($objectName);
+        try {
+            $object->downloadToFile($destination);
+            // file downloaded successfully, do something with it
+        } catch (Google\Cloud\Core\Exception\NotFoundException $e) {
+            // file not found, handle error
+            echo "Error: File not found";
+            return false;
+        }
+        printf(
+            'Downloaded gs://%s/%s to %s' . PHP_EOL,
+            $bucketName,
+            $objectName,
+            basename($destination)
+        );
+        return $object != null;
+    }
 }
 ?>
