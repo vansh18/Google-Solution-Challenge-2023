@@ -7,3 +7,4 @@ hope/application/key.txt
 hope/data/test.json
 .DS_Store
 hope/data
+hope/application/storage_cred.json

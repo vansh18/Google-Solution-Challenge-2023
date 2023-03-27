@@ -51,6 +51,8 @@ class ChatModel extends CI_Model
         $response = $client->completion([
             'model' => 'text-davinci-003',
             'max_tokens' => 1000,
+            'frequency_penalty' => 0,
+            'presence_penalty' => 0,
             'prompt' => $msg,
             'temperature' => 0
         ]);
