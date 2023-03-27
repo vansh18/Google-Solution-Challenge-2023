@@ -37,7 +37,7 @@
                 <img src="/images/music-blob.svg" alt="">
             </div>
             <div class="music-content">
-                <h4>Select what you want to listen</h4>
+                <h2>Select what you want to listen</h2>
 
                 <div class="music-section">
                     <div class="box box-1">
@@ -61,4 +61,25 @@
 
     </section>
 </body>
+<script>
+    var dropdown_menu = document.getElementById("dropdown_menu");
+    var menu_icon = document.getElementById("menu-icon"); 
+
+    menu_icon.addEventListener("click", function() 
+    {
+        if(menu_icon.name == "menu-outline")
+        {
+            menu_icon.name = "close-outline";
+            document.querySelector(".links").style.display = "block";
+            document.querySelector(".toggle_btn").style.color = "#FFF";
+            console.log("working");
+        }
+        else
+        {
+            menu_icon.name = "menu-outline";
+            document.querySelector(".links").style.display = "none";
+            document.querySelector(".toggle_btn").style.color = "#000"; 
+        }
+    });
+</script>
 </html>
