@@ -32,7 +32,6 @@
   
   header 
   {
-    background-color: #F1DBC2;
     padding: 1rem;
   }
   
@@ -238,7 +237,7 @@
     .active
     {
         position: absolute;
-        background: #3C2A21;
+        background: #3c2a21;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
