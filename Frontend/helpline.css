@@ -176,22 +176,25 @@ header
         transition: 0.6s ease-in-out;
     }
 
-    .navbar .links.open {
+    .navbar .links.open 
+    {
         display: flex;
     }
 
-    .navbar .toggle_btn.active .line1 {
+    .navbar .toggle_btn.active .line1 
+    {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
 
-    .navbar .toggle_btn.active .line2 {
+    .navbar .toggle_btn.active .line2 
+    {
         opacity: 0;
     }
 
-    .navbar .toggle_btn.active .line3 {
+    .navbar .toggle_btn.active .line3 
+    {
         transform: rotate(45deg) translate(-5px, -6px);
     }
-
 
     .navbar .links li
     {
