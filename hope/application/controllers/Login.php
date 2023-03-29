@@ -55,5 +55,10 @@ class Login extends CI_Controller {
             $this->LoginModel->register($name,$email,$password);
             echo json_encode(array('status' => 200, 'success' => true, 'email' => $email, 'password' => $password));
     }
+    public function user_logout()
+    {
+        $this->LoginModel->destroy_session();
+        redirect("login");
+    }
 }
 ?>

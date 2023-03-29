@@ -103,12 +103,12 @@ class gcp_config extends CI_Model
             echo "Error: File not found";
             return false;
         }
-        printf(
-            'Downloaded gs://%s/%s to %s' . PHP_EOL,
-            $bucketName,
-            $objectName,
-            basename($destination)
-        );
+        // printf(
+        //     'Downloaded gs://%s/%s to %s' . PHP_EOL,
+        //     $bucketName,
+        //     $objectName,
+        //     basename($destination)
+        // );
         return $object != null;
     }
 }
