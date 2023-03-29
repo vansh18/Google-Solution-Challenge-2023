@@ -52,13 +52,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['login'] = 'login/user_login';
+$route['validate-user'] = 'login/validate';
+$route['logout'] = 'login/user_logout';
+$route['signup'] = 'login/signup';
+$route['register-user'] = 'login/register_user';
+
+$route['home'] = 'home';
+$route['meditation'] = 'home/meditation';
+$route['habituation'] = 'home/habituation';
+
 $route['get-output'] = 'chat/get_chat';
 $route['chat'] = 'chat/call_chat';
 $route['begin-chat'] = 'welcome/start_chat';
-$route['validate-user'] = 'login/validate';
-$route['home'] = 'home';
-$route['login'] = 'login/user_login';
-$route['signup'] = 'login/signup';
-$route['register-user'] = 'login/register_user';
+
 $route['upload-file'] = 'storage/upload_file';
 $route['get-file'] = 'storage/get_file';

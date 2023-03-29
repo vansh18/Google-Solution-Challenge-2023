@@ -1,151 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;627&family=Chelsea+Market&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
 *,*::after,*::before
 {
-    margin: 0; 
-    padding: 0; 
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans';
     /* outline: 1px solid black !important; */
 }
-body
+  
+body 
 {
-    height: 100vh;
-    background: #EAF2FF;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.5;
 }
-li
+  
+a 
 {
-    list-style-type: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: #3C2A21;
 }
-a
+
+ul 
 {
-    text-decoration: none;
-    color: #1B110A;
-    font-size: 1rem;
+  list-style: none;
 }
-a.hover
+
+/* ----- Header ----- */
+  
+header 
 {
-    color: green;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
-.logo a img
+  
+.navbar 
 {
-    width: 150px;
-    height: 70px;
-}
-header
-{
-    position: relative;
-    padding: 0 2rem;
-}
-.navbar
-{
-    position: relative;
-    width: 100%;
-    top: 20px;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto ;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.navbar .logo a
+  
+.logo img 
 {
-    font-size: 1.5rem;
-    font-weight: bold;
+    height: 50px;
 }
-.navbar .links
+
+.links 
 {
     display: flex;
-    gap: 2rem;
-    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
 }
-.navbar .toggle_btn
+  
+.links li 
 {
-    color: #000000;
-    font-size: 1.5rem;
+    list-style: none;
+    margin-right: 30px;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.links li a 
+{
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+
+.links li a:hover,
+.links li a.active 
+{
+    color: #6c63ff;
+}
+  
+.person 
+{
+    padding: 10px;
+    color: #1B110A;
+    border-radius: 5px;
+}
+
+.toggle_btn 
+{
+    font-size: 30px;
     cursor: pointer;
     display: none;
 }
-
-/*  DROPDOWN  */
-.dropdown_menu
+  
+/* ----- Upper box section ----- */
+  
+.upper_box 
 {
-    display: none;
-    position: relative;
-    right: 2rem;
-    top: 120px;
-    height: 0px;
-    width: 300px;
-    background: #BFD8FF50;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.dropdown_menu.open
-{
-    height: 240px;
-}
-.dropdown_menu li
-{
-    padding: 0.7rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-}
-.upper_box
-{   position: relative;
-    margin: 35px auto;
-    margin-bottom: 10px;
+    background-color: #BFD8FF;
+    color: #1B110A;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    padding: 20px;
     width: 90%;
-    background: #BFD8FF;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px 20px 40px;
+    margin: auto;
+    border-radius: 20px;
 }
-.upper_box .message
-{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    color: #1B110A;
-}
-.upper_box .message .greetings
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 24px;
-    font-weight: 600;
-    color: #1B110A;
-}
-.upper_box .message .greetings img
-{
-    width: 40px;
-    height: 40px;    
-}
-.talk_to_hope
-{
-    position: relative;
-    background: #D3E8FD;
-    padding: 10px;
-    border-radius: 10px;
-}
-.talk_to_hope a
-{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #1973E8;
-    font-weight: 600;
 
-}
-.talk_to_hope a img
+.greetings 
 {
-    width: 56px;
-    height: 56px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
+
+.greetings img
+{
+    width: 50px;
+}
+  
+.quote 
+{
+    font-size: 16px;
+}
+  
+.talk_to_hope a 
+{
+    background-color: #fff;
+    color: #1B110A;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.talk_to_hope img 
+{
+    width: 60px;
+    margin-left: 10px;
+}
+  
 .just_for_you
 {
     position: relative;
@@ -153,6 +152,7 @@ header
     font-weight: 600;
     margin: 5px 8%;
 }
+
 .grid
 {
     position: relative;
@@ -164,6 +164,7 @@ header
     gap: 15px;
     margin: 10px 5% 0;
 }
+
 .box-1
 {
    grid-row: 1/2;
@@ -181,6 +182,7 @@ header
    flex-direction: column;
    justify-content: center;
 }
+
 .box-2
 {
     grid-row: 2/3;
@@ -194,20 +196,17 @@ header
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),url(./Google-Solution-Challenge-2023/hope/assets/images/meditate.jpg) no-repeat;
-    background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
 }
+
 .box-2:hover
 {
     transform: scale(1.05);
     font-size: 29px;
 }
+
 .box-3
 {
     grid-row: 2/3;
@@ -221,20 +220,17 @@ header
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),url(./Google-Solution-Challenge-2023/hope/assets/images/habits.jpg) no-repeat;
-      background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
 }
+
 .box-3:hover
 {
     transform: scale(1.05);
     font-size: 29px;
 }
+
 .box-4
 {
     grid-row: 1/3;
@@ -247,20 +243,17 @@ header
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),url(./Google-Solution-Challenge-2023/hope/assets/images/chill_music.jpg) no-repeat;
-      background-size: cover;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .6s;
 }
+
 .box-4:hover
 {
     transform: scale(1.05);
     font-size: 29px;
 }
+
 .box-5
 {
     display: flex;
@@ -272,6 +265,7 @@ header
     background: linear-gradient(180.09deg, #FFBE4E 60.02%, rgba(255, 190, 78, 0) 99.92%);
     border-radius: 20px;
 }
+
 .box-5 h3
 {
     font-family: 'Open Sans';
@@ -281,10 +275,12 @@ header
     color: #522200;
     padding-bottom: 20px;
 }
+
 .box-5 p
 {
     color: #FFFFFF;
 }
+
 .box-5 button
 {
     position: relative;
@@ -300,11 +296,13 @@ header
     margin-top: 20px;
     width: 100%;
 }
+
 .buttons
 {
     position: relative;
     margin: 10px 5%;
 }
+
 .buttons button
 {
     background: none;
@@ -315,38 +313,4 @@ header
     font-weight: 600;
     margin-right: 5px;
     cursor: pointer;
-}
-
-
-
-
-
-
-
-
-/*  RESPONSIVENESS  */
-
-@media (max-width:992px)
-{
-    .navbar .links,
-    .navbar .action_btn
-    {
-        display: none;
-    }
-    .navbar .toggle_btn
-    {
-        display: block;
-    }
-    .dropdown_menu
-    {
-        display: block;
-    }
-}
-@media (max-width:576px)
-{
-    .dropdown_menu
-    {
-        left: 2rem;
-        width: unset;
-    }
 }

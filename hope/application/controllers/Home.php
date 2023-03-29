@@ -13,5 +13,13 @@ class Home extends CI_Controller
         // print_r($_SESSION);
         $this->load->view('home_view.php');
     }
+    public function meditation()
+    {
+        $this->load->view('meditation_view.php');
+    }
+    public function habituation()
+    {
+        $this->load->view('habituation_view.php');
+    }
 }
 ?>
