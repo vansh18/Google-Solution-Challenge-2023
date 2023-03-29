@@ -149,9 +149,9 @@ label h6
     height: 45px;
     border-radius: 10px;
     font-weight: 500;
-    transition: .3s ease-in-out;
+    transition: .3s ;
     cursor: pointer;
-    border: 2px solid #1973E8;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,9 +159,10 @@ label h6
 
 .button button:hover
 {
-    background: transparent;
-    border: 2px solid #1973E8;
-    color: #1973E8;
+    border: none;
+    background: #145CBA;
+    color: #FFF;
+    border: none;
 }
 
 @media only screen and (max-width: 480px) 
