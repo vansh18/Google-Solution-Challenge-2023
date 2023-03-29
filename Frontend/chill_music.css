@@ -1,81 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;627&family=Chelsea+Market&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
-
-*,*::after,*::before
-{
-    margin: 0; 
-    padding: 0; 
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Open Sans';
     /* outline: 1px solid black !important; */
-}
-
-body
-{
+  }
+  
+  body 
+  {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.5;
     background: #DAE6F2;
-}
-
-li
-{
-    list-style-type: none;
-}
-
-a
-{
+  }
+  
+  a 
+  {
     text-decoration: none;
-    color: #1B110A;
-    font-size: 1rem;
-}
-
-.logo a img
-{
-    width: 150px;
-    height: 70px;
-}
-
-header
-{
-    position: relative;
-    padding: 0 2rem;
-}
-
-.navbar
-{
-    position: relative;
-    width: 100%;
-    top: 20px;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo a
-{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .links
-{
-    display: flex;
-    gap: 2rem;
     font-weight: 600;
-    transition: 0.6s ease-in-out;
+    color: #3C2A21;
+  }
+  
+  ul 
+  {
+    list-style: none;
+  }
+  
+  /* HEADER */
+  
+header 
+{
+    padding: 1rem;
+}
+  
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.logo img 
+{
+    height: 50px;
+}
+  
+.links
+{
+  margin: 0;
 }
 
-.navbar .toggle_btn
+.links li 
 {
-    color: #000000;
-    font-size: 1.5rem;
-    cursor: pointer;
+    display: inline-block;
+    margin-right: 1rem;
+}
+  
+.logout_btn 
+{
+    display: inline-block;
+    color: #3C2A21;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.toggle_btn 
+{
     display: none;
 }
 
 section
 {
     display: flex;
+    height: calc(100vh - 150px);
 }
 
 .left-box
@@ -84,12 +83,13 @@ section
     width: 50%;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 }
 
 .right-box
 {
     width: 50%;
-    height: calc(100vh - 60px);
+    height: 100%;
 }
 
 .right-box .man
@@ -98,6 +98,7 @@ section
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .right-box img
@@ -141,85 +142,67 @@ section
 
 /* ----- RESPONSIVENESS ----- */
 
-@media screen and (max-width: 890px) 
+@media only screen and (max-width: 600px) 
 {
 
-    .navbar 
-    {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .navbar .logo 
-    {
-        margin-bottom: 1rem;
-    }
-    
-    .navbar .toggle_btn 
-    {
-        position: absolute;
-        display: block;
-        top: 25px;
-        right: 5px;
-        font-size: 28px;
-        color: #000;
-        z-index: 1000;
-    }
-
-    .navbar .links 
+    ul
     {
         display: none;
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        margin-bottom: 1rem;
-        z-index: 999;
-        padding: 20px 30px;
-        border-radius: 10px;
-        text-align: center;
-        background: #5A9BFF;
-        opacity: .95;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.195);
-        transition: 0.6s ease-in-out;
     }
-
-    .navbar .links.open {
-        display: flex;
-    }
-
-    .navbar .toggle_btn.active .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .navbar .toggle_btn.active .line2 {
-        opacity: 0;
-    }
-
-    .navbar .toggle_btn.active .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-
-    .navbar .links li
+      
+    .logout_btn
     {
-        margin: 40px;
+        display: none;
     }
 
-    .navbar .links li a
+    .active1
+    {
+        position: absolute;
+        background: #5A9BFF;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 80px;
+        right: 35px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+        z-index: 1000;
+    }
+    
+    .active1 li a 
     {
         color: #FFF;
-        font-size: 20px;
+    }
+  
+    .toggle_btn 
+    {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .links li 
+    {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1rem;
     }
 
-    .navbar .links li a:hover
+    .carousel-item
     {
-        color: #000;
+        border-radius: 50px 50px 0 0;
     }
-    .navbar .links.open 
+}
+
+
+@media screen and (max-width: 890px) 
+{
+    .logout_btn
     {
-        display: flex;
+        display: none;
     }
 
     .right-box

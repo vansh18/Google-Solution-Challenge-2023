@@ -13,20 +13,19 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="home.html">
+                <a href="#">
                     <img src="/images/LOGO_HOME.svg" alt="" srcset="" >
                 </a>
             </div>
-                <div class="toggle_btn">
-                    <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
-                </div>
-            <div class="dropdown_menu">
-                <ul class="links">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#">Meditation</a></li>
-                    <li><a href="habituation.html">Habituation</a></li>
-                    <li><a href="#">Chill Music</a></li>
-                </ul>
+            <ul class="links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="meditation.html">Meditation</a></li>
+                <li><a href="habituation.html">Habituation</a></li>
+                <li><a href="chill_music.html">Chill Music</a></li>
+            </ul>
+            <a href="home.html"><span class="logout_btn">Logout</span></a>
+            <div class="toggle_btn">
+                <ion-icon name="menu-outline"></ion-icon>
             </div>
         </div>
     </header>
@@ -62,24 +61,11 @@
     </section>
 </body>
 <script>
-    var dropdown_menu = document.getElementById("dropdown_menu");
-    var menu_icon = document.getElementById("menu-icon"); 
+const toggleBtn = document.querySelector('.toggle_btn');
+const links = document.querySelector('.links');
 
-    menu_icon.addEventListener("click", function() 
-    {
-        if(menu_icon.name == "menu-outline")
-        {
-            menu_icon.name = "close-outline";
-            document.querySelector(".links").style.display = "block";
-            document.querySelector(".toggle_btn").style.color = "#FFF";
-            console.log("working");
-        }
-        else
-        {
-            menu_icon.name = "menu-outline";
-            document.querySelector(".links").style.display = "none";
-            document.querySelector(".toggle_btn").style.color = "#000"; 
-        }
-    });
+toggleBtn.addEventListener('click', () => {
+  links.classList.toggle('active1');
+});
 </script>
 </html>
