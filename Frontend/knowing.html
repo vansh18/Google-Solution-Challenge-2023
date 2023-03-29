@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Checkbox as tiles</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="knowing.css">
-    <title>Knowing you better</title>
 </head>
 <body>
     <header>
@@ -17,23 +18,56 @@
             </a>
         </div>
     </header>
-    <section>
-        <div class="info-message">
-            <h1>Knowing You Better</h1>
-            <p>This helps us to serve you even better, we care about your privacy so your chats perfectly safe with us.</p>
+    <div class="info-message">
+        <h1>Knowing You Better</h1>
+        <p>This helps us to serve you even better, we care about your privacy so your chats perfectly safe with us.</p>
+    </div>
+    <section class="problems">
+        <div class="tile">
+            <input type="checkbox" name="problem" id="Anxiety">
+            <label for="Anxiety">
+                <h6>Anxiety</h6>
+            </label>
         </div>
-        <div class="problems">
-            <div class="box box-1">Anxiety</div>
-            <div class="box box-2">Depression</div>
-            <div class="box box-3">Work Stress</div>
-            <div class="box box-4">Exam Stress</div>
-            <div class="box box-5">Relationships</div>
-            <div class="box box-6">Trauma</div>
-            <div class="box box-7">Sleep Disorder</div>
+        <div class="tile">
+            <input type="checkbox" name="problem" id="Depression">
+            <label for="Depression">
+                <h6>Depression</h6>
+            </label>
         </div>
-        <div class="button">
-            <button type="button">Continue</button>
+        <div class="tile">
+            <input type="checkbox" name="problem" id="WorkStress">
+            <label for="WorkStress">
+                <h6>Work Stress</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="problem" id="ExamStress">
+            <label for="ExamStress">
+                <h6>Exam Stress</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="problem" id="Relationships">
+            <label for="Relationships">
+                <h6>Relationships</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="problem" id="Trauma">
+            <label for="Trauma">
+                <h6>Trauma</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" name="problem" id="SleepDisorder">
+            <label for="SleepDisorder">
+                <h6>Sleep Disorder</h6>
+            </label>
         </div>
     </section>
+    <div class="button">
+        <button type="button">Continue</button>
+    </div>
 </body>
 </html>
