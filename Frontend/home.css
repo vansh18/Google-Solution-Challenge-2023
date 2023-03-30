@@ -267,14 +267,13 @@ header
     justify-content: center;
 }
 
-
 .buttons
 {
     position: relative;
     margin: 10px 5%;
 }
 
-.buttons button
+.buttons .button
 {
     background: none;
     padding: 5px 20px;
@@ -287,10 +286,16 @@ header
     transition: .3s ease-in-out;
 }
 
-.buttons button:hover
+.buttons .button:hover
 {
     background: #EDDDD9;
 }
+
+.buttons a
+{
+    font-size: .8rem;
+}
+
 
 .chill-music-a
 {

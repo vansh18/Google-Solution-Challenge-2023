@@ -34,6 +34,7 @@ var Prompt = new CustomPrompt();
 const toggleBtn = document.querySelector('.toggle_btn');
 const links = document.querySelector('.links');
 
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', () => 
+{
   links.classList.toggle('active1');
 });
