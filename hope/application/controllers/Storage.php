@@ -11,22 +11,22 @@ class Storage extends CI_Controller
     }
     public function index()
     {
-        $this->load->model('gcp_config');
+        $this->load->model('GcpModel');
         $bucketName = 'hope_bucket';
         $cloudPath = "user_data/test.txt";
         $fileContent = "Hello this is new content i am uploading!";
-        // $this->gcp_config->uploadFile($bucketName, $fileContent, $cloudPath);
-        // $this->gcp_config->downloadFile($bucketName,"user_data/test.txt","./data/test.txt");
+        // $this->GcpModel->uploadFile($bucketName, $fileContent, $cloudPath);
+        // $this->GcpModel->downloadFile($bucketName,"user_data/test.txt","./data/test.txt");
     }
     public function upload_file() // called when user ends chat session
     {
         $userid = $_SESSION['userid'];
         $filename = sprintf("user_chat_%s.json",$userid);
         $fileContent = file_get_contents('./data/'.$filename); // get file content from temp file in data folder
-        $this->load->model('gcp_config');
+        $this->load->model('GcpModel');
         $bucketName = 'hope_bucket';
         $cloudPath = "user_data/".$filename;
-        if(!$this->gcp_config->uploadFile($bucketName, $fileContent, $cloudPath))// upload file contents to gcp
+        if(!$this->GcpModel->uploadFile($bucketName, $fileContent, $cloudPath))// upload file contents to gcp
             $msg =  'file uplaod error';
         else
         {
@@ -46,10 +46,10 @@ class Storage extends CI_Controller
     {
         $userid = $_SESSION['userid'];
         $filename = sprintf("user_chat_%s.json",$userid);
-        $this->load->model('gcp_config');
+        $this->load->model('GcpModel');
         $bucketName = 'hope_bucket';
         $cloudPath = "user_data/".$filename;
-        if(!$this->gcp_config->downloadFile($bucketName, $cloudPath, "./data/".$filename))// upload file contents to gcp
+        if(!$this->GcpModel->downloadFile($bucketName, $cloudPath, "./data/".$filename))// upload file contents to gcp
             $msg =  'file not found';
         else
         {

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require_once 'vendor/autoload.php';
 use Google\Cloud\Storage\StorageClient;
-class gcp_config extends CI_Model
+class GcpModel extends CI_Model
 {
     // Please use your own private key (JSON file content) which was downloaded in step 3 and copy it here
     // your private key JSON structure should be similar like dummy value below.
