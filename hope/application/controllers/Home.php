@@ -33,5 +33,9 @@ class Home extends CI_Controller
             redirect('home');
         }
     }
+    public function about_hope()
+    {
+        $this->load->view("abouthope_view.php");
+    }
 }
 ?>

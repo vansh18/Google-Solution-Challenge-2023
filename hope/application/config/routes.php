@@ -74,3 +74,4 @@ $route['upload-file'] = 'storage/upload_file';
 $route['get-file'] = 'storage/get_file';
 
 $route['feedback'] = 'home/feedback';
+$route['about-hope'] = 'home/about_hope';
