@@ -36,6 +36,5 @@ class Habituation extends CI_Controller
         $this->HabitModel->reset_habit($habit_id);
         echo (json_encode(array('status' => 200, 'reply' => 'success')));
     }
-    // public function get_habits()
 }
 ?>

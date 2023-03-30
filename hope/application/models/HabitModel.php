@@ -19,7 +19,7 @@ class HabitModel extends CI_Model
     }
     public function get_habits($userid)
     {
-        $this->db->select('addiction_id,addiction,start_time');
+        $this->db->select('addiction_id,addiction,start_time,max_streak');
         $this->db->from('habituation');
         $this->db->where('user_id',$userid);
         $query = $this->db->get();
@@ -85,6 +85,5 @@ class HabitModel extends CI_Model
         {
             
         }
-
     }
 }

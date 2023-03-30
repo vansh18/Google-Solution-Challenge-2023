@@ -77,8 +77,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="container">
                         <div class="box-container">
                             <div class="box box-1">
-                                <p class="heading">Streak</p>
-                                <p class="streak"><?php echo $myhabit['streak']." days";?></p>
+                                <p class="heading">Max Streak</p>
+                                <p class="streak"><?php echo $myhabit['max_streak']." days";?></p>
                             </div>
                         </div>
                         <div class="box-container">
@@ -109,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="box-container">
                             <div class="box box-1">
                                 <p class="heading">Max Streak</p>
-                                <p class="streak"><?php echo $myhabit['streak']." days";?></p>
+                                <p class="streak"><?php echo $myhabit['max_streak']." days";?></p>
                             </div>
                         </div>
                         <div class="box-container">
