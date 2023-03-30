@@ -13,27 +13,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>HOPE | MEDITATION</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="<?php echo BASE_URL."home";?>">
-                    <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="" srcset="" >
-                </a>
-            </div>
-            <ul class="links">
-                <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
-                <li><a href="<?php echo BASE_URL."meditation";?>">Meditation</a></li>
-                <li><a href="<?php echo BASE_URL."habituation";?>">Habituation</a></li>
-                <li><a href="<?php //echo BASE_URL."chill_music";?>">Chill Music</a></li>
-            </ul>
-            <a href="<?php echo BASE_URL."home";?>"><span class="back_btn">Back</span></a>
-            <div class="toggle_btn">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
+  <header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="<?php echo BASE_URL."home";?>">
+                <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="" srcset="" >
+            </a>
         </div>
-    </header>
-    <section>
+        <ul class="links">
+            <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
+            <li><a href="<?php echo BASE_URL."meditation";?>">Meditation</a></li>
+            <li><a href="<?php echo BASE_URL."habituation";?>">Habituation</a></li>
+            <li><a href="<?php //echo BASE_URL."chill_music";?>">Chill Music</a></li>
+        </ul>
+        <a href="<?php echo BASE_URL."logout";?>"><span class="logout_btn">Logout</span></a>
+        <div class="toggle_btn">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+    </div>
+  </header>
 
+  <section>
         <div class="greeting-message">
             <h1 style="color:#3C2A21">MEDITATION</h1>
             <p style="color:#3C2A21">Find Inner Peace and Calm Your Mind: Explore Meditation Techniques</p>
@@ -72,10 +72,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
           </div>
-    </section>
+  </section>
 </body>
 <script>
-    const toggleBtn = document.querySelector('.toggle_btn');
+const toggleBtn = document.querySelector('.toggle_btn');
 const links = document.querySelector('.links');
 
 toggleBtn.addEventListener('click', () => {

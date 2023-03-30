@@ -17,13 +17,21 @@ class Home extends CI_Controller
     {
         $this->load->view('meditation_view.php');
     }
-    public function habituation()
+    public function feedback()
     {
-        $this->load->view('habituation_view.php');
-    }
-    public function test()
-    {
-        $this->load->view("car_test.php");
+        if(!isset($_POST['feedback']))
+        {
+            $this->load->view("feedback_view.php");
+        }
+        else
+        {
+            $feedback = $_POST['feedback'];
+            $this->load->model("FeedbackModel");
+            $userid = $_SESSION['userid'];
+            $username = $_SESSION['name'];
+            $this->FeedbackModel->insert_feedback($feedback,$userid,$username);
+            redirect('home');
+        }
     }
 }
 ?>
