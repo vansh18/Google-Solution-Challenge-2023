@@ -61,7 +61,10 @@ $route['register-user'] = 'login/register_user';
 
 $route['home'] = 'home';
 $route['meditation'] = 'home/meditation';
-$route['habituation'] = 'home/habituation';
+$route['habituation'] = 'habituation';
+$route['add-habit'] = 'habituation/add_habit';
+$route['delete-habit'] = 'habituation/delete_habit';
+$route['reset-habit'] = 'habituation/reset_habit';
 
 $route['get-output'] = 'chat/get_chat';
 $route['chat'] = 'chat/call_chat';

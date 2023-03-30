@@ -17,10 +17,6 @@ class Home extends CI_Controller
     {
         $this->load->view('meditation_view.php');
     }
-    public function habituation()
-    {
-        $this->load->view('habituation_view.php');
-    }
     public function test()
     {
         $this->load->view("car_test.php");
