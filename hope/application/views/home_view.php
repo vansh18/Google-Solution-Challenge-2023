@@ -123,7 +123,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="buttons">
             <button class="button">Helpline</button>
             <button class="button">Contact a counsellor</button>
-            <a href="feedback.html" class="button">Give feedback</a>
+            <a href="<?php echo BASE_URL."feedback";?>" class="button">Give feedback</a>
         </div>
     </main>    
 </body>
