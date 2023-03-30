@@ -10,26 +10,26 @@
     <title>HOPE | MEDITATION</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <a href="#">
-                    <img src="/images/LOGO_HOME.svg" alt="" srcset="" >
-                </a>
-            </div>
-            <ul class="links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="meditation.html">Meditation</a></li>
-                <li><a href="habituation.html">Habituation</a></li>
-                <li><a href="chill_music.html">Chill Music</a></li>
-            </ul>
-            <a href="home.html"><span class="back_btn">Logout</span></a>
-            <div class="toggle_btn">
-                <ion-icon name="menu-outline"></ion-icon>
-            </div>
+  <header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img src="/images/LOGO_HOME.svg" alt="" srcset="" >
+            </a>
         </div>
-    </header>
-    <section>
+        <ul class="links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="meditation.html">Meditation</a></li>
+            <li><a href="habituation.html">Habituation</a></li>
+            <li><a href="chill_music.html">Chill Music</a></li>
+        </ul>
+        <a href="home.html"><span class="logout_btn">Logout</span></a>
+        <div class="toggle_btn">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+    </div>
+  </header>
+  <section>
 
         <div class="greeting-message">
             <h1 style="color:#3C2A21">MEDITATION</h1>
@@ -69,10 +69,10 @@
               </div>
             </div>
           </div>
-    </section>
+  </section>
 </body>
 <script>
-    const toggleBtn = document.querySelector('.toggle_btn');
+const toggleBtn = document.querySelector('.toggle_btn');
 const links = document.querySelector('.links');
 
 toggleBtn.addEventListener('click', () => {
