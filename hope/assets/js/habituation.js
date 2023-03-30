@@ -12,7 +12,7 @@ function CustomPrompt()
 	    dialogbox.style.top = "100px";
 	    dialogbox.style.display = "block";
 	    document.getElementById('dialogboxbody').innerHTML = dialog;
-		document.getElementById('dialogboxbody').innerHTML += '<br><input id="prompt_value1" autocomplete="off">';
+		document.getElementById('dialogboxbody').innerHTML += '<br><input id="prompt_value1" autocomplete="off" autofocus>';
 		document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Prompt.ok(\''+func+'\')">Add</button> <button onclick="Prompt.cancel()">Cancel</button>';
 	}
 	this.cancel = function()
