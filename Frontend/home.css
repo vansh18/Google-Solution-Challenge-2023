@@ -90,7 +90,7 @@ header
 
 .greetings 
 {
-    font-size: 30px;
+    font-size: 1.9rem;
     margin-bottom: 10px;
 }
 
@@ -101,7 +101,7 @@ header
   
 .quote 
 {
-    font-size: 16px;
+    font-size: 1rem;
 }
   
 .talk_to_hope a 
@@ -113,11 +113,6 @@ header
     font-weight: bold;
     text-decoration: none;
 }
-
-/* .talk_to_hope img:hover 
-{
-    transform: translateY(-5px);
-}  */
 
 .talk_to_hope img 
 {
@@ -154,7 +149,7 @@ header
    font-family: 'Open Sans';
    font-style: normal;
    font-weight: 500;
-   font-size: 16px;
+   font-size: 1rem;
    line-height: 30px;
    padding: 10px 20px;
    color: #515151;
@@ -169,13 +164,14 @@ header
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     background: #B3E0FF;
     border-radius: 10px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 1.5rem;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .4s;
@@ -184,7 +180,7 @@ header
 .box-2:hover
 {
     transform: scale(1.05);
-    font-size: 29px;
+    font-size: 27px;
 }
 
 .box-3
@@ -193,13 +189,14 @@ header
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     background: #B3E0FF;
     border-radius: 10px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 1.5rem;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .4s;
@@ -208,19 +205,20 @@ header
 .box-3:hover
 {
     transform: scale(1.05);
-    font-size: 29px;
+    font-size: 27px;
 }
 
 .box-4
 {
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 1.5rem;
     color: #FFFFFF;
     cursor: pointer;
     transition: ease-in-out .4s;
@@ -231,7 +229,7 @@ header
 .box-4:hover
 {
     transform: scale(1.05);
-    font-size: 29px;
+    font-size: 27px;
 }
 
 .box-5
@@ -247,7 +245,7 @@ header
     transition: ease-in-out .4s;
 }
 
-.hidden-know-more
+.know-more p
 {
     color: #fff;
     margin-top: 10px;
@@ -263,7 +261,7 @@ header
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 2rem;
     color: #522200;
     display: flex;
     justify-content: center;
@@ -329,4 +327,345 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.mob-grid
+{
+    display: none;
+}
+
+/* ----- RESPONSIVENESS ----- */
+
+@media only screen and (max-width: 992px) 
+{
+
+    .grid
+    {
+        height: calc(100vh - 450px);
+        max-height: 250px;
+    }
+
+    .box-1
+    {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .box-2
+    {
+        font-size: 14px;
+    }
+
+    .box-3
+    {
+        font-size: 14px;
+    }
+
+    .box-4
+    {
+        font-size: 14px;
+    }
+
+    .box-5
+    {
+        font-size: 16px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 730px) 
+{
+
+    ul
+    {
+        display: none;
+    }
+      
+    .logout_btn
+    {
+        display: none;
+    }
+
+    .active1
+    {
+        position: absolute;
+        background: #5A9BFF;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 80px;
+        right: 35px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+        z-index: 1000;
+    }
+    
+    .active1 li a 
+    {
+        color: #FFF;
+    }
+  
+    .toggle_btn 
+    {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .links li 
+    {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    .greetings 
+    {
+        font-size: 20px;
+    }
+
+    .greetings img 
+    {
+        width: 28px;
+    } 
+
+    .quote
+    {
+        font-size: 14px;
+    }
+
+    .talk_to_hope a
+    {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    .talk_to_hope a img 
+    {
+        width: 40px;
+        margin-left: 5px;
+    }
+
+    .just_for_you
+    {
+        font-size: 18px;
+    }
+
+    .grid
+    {
+        height: calc(100vh - 450px);
+    }
+    
+    .box-1 p
+    {
+        font-size: 12px;
+        line-height: normal;
+    }
+    .box-1
+    {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px;
+    }
+
+    .box-2
+    {
+        font-size: 14px;
+    }
+
+    .box-3
+    {
+        font-size: 14px;
+    }
+
+    .box-4
+    {
+        font-size: 14px;
+    }
+
+    .box-5
+    {
+        font-size: 16px;
+    }
+
+
+}
+
+@media only screen and (max-width: 576px) 
+{
+
+    .box-1
+    {
+        padding: 5px 10px;
+    }
+    
+    .box-1 p
+    {
+        font-size: 10px;
+        line-height: normal;
+    }
+
+    .box-2
+    {
+        font-size: 10px;
+    }
+
+    .box-3
+    {
+        font-size: 10px;
+    }
+
+    .box-4
+    {
+        font-size: 14px;
+    }
+
+    .box-5
+    {
+        font-size: 16px;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) 
+{
+    .upper_box
+    {
+        padding: 15px 0 15px 10px;
+        padding-right: 0;
+    }
+
+    .greetings 
+    {
+        font-size: 1rem;
+    }
+
+    .greetings img 
+    {
+        width: 18px;
+    } 
+
+    .quote
+    {
+        font-size: .6rem;
+    }
+
+    .talk_to_hope
+    {
+        display: inline-block;
+        width: 120px;
+    }
+
+    .talk_to_hope a
+    {
+        font-size: .5rem;
+        padding: 5px;
+    }
+
+    .talk_to_hope a img 
+    {
+        width: 30px;
+        margin-left: 5px;
+    }
+
+    .just_for_you
+    {
+        font-size: .8rem;
+    }
+
+    .grid
+    {
+        display: none;
+    }
+
+    .mob-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mob-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .recommend
+    {
+        width: 50%;
+        margin: 5px;
+        padding: 5px;
+        background: #B3E0FF;
+        border-radius: 10px;
+    }
+
+    .recommend p 
+    {
+        font-size: .8rem;
+        color: #333;
+        font-weight: 500;
+        padding: 5px;
+    }
+    
+    .hope
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        margin: 10px;
+        background: linear-gradient(180.09deg, #FFBE4E 60.02%, rgba(255, 190, 78, 0) 99.92%);
+        border-radius: 10px;
+    }
+
+    .hope a 
+    {
+        text-decoration: none;
+        font-size: .8rem;
+        color: #FFF;
+    }
+
+    .mob-container2
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mob-1,.mob-2, .mob-3
+    {
+        width: 28%;
+        margin: 10px auto;
+        height: 120px;
+    }
+
+    .mob-div
+    {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-size: .8rem;
+    }
+
+    .buttons
+    {
+        margin: 5px 3%;
+    }
+
+    .buttons button 
+    {
+        padding: 5px 10px;
+        font-size: .8rem;
+    }
 }

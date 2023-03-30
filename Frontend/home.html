@@ -44,15 +44,14 @@
         <h2 class="just_for_you">Just for you &#58&#41</h2>
         <div class="grid">
             <div class="box box-1">
-                <p>Anxiety</p>
-                <p>Depression</p>
+                <p>Find inner peace and relaxation with our recommended meditation exercises. Breathe and center yourself today.</p>
                 <p>Meditate</p>
             </div>
             <a href="meditation.html" class="meditate-a">
                 <div class="box box-2" style="background: linear-gradient(
                     rgba(0, 0, 0, 0.4),
                     rgba(0, 0, 0, 0.4)
-                    ),url(/images/meditate.jpg); background-size: cover;">
+                    ),url(/images/meditate.jpg); background-size: cover; background-position: center;">
                 MEDITATE
             </div>
         </a>
@@ -61,7 +60,7 @@
                 <div class="box box-3" style="background: linear-gradient(
                     rgba(0, 0, 0, 0.4),
                     rgba(0, 0, 0, 0.4)
-                    ),url(/images/habits.jpg); background-size: cover;">
+                    ),url(/images/habits.jpg); background-size: cover; background-position: center;">
                 HABITAUATION
             </div>
         </a>
@@ -70,14 +69,54 @@
                 <div class="box box-4" style="background: linear-gradient(
                     rgba(0, 0, 0, 0.4),
                     rgba(0, 0, 0, 0.4)
-                    ),url(/images/chill_music.jpg);background-size: cover;">CHILL MUSIC</div>
+                    ),url(/images/chill_music.jpg);background-size: cover; background-position: center;">CHILL MUSIC</div>
             </a>
             <a href="#" class="know-more">
                 <div class="box box-5">
                     <h3>HOPE</h3>
-                    <p class="hidden-know-more">Know more</p>
-                </div> 
+                    <p>Know more</p>
+                </div>
             </a>
+        </div>
+        <div class="mob-grid">
+            <div class="mob-container">
+                <div class="recommend">
+                    <p>Find inner peace and relaxation with our recommended meditation exercises. Breathe and center yourself today.</p>
+                </div>
+                <div class="hope">
+                    <h3>HOPE</h3>
+                    <a href="#">Know more</a>
+                </div>
+            </div>
+            <div class="mob-container2">
+                <a href="meditation.html" class="mob-1">
+
+                    <div class="mob-div"style="background: linear-gradient(
+                        rgba(0, 0, 0, 0.4),
+                        rgba(0, 0, 0, 0.4)
+                        ),url(/images/meditate.jpg); background-size: cover; background-position: center;">
+                        MEDITATE
+                    </div>
+                </a>
+                <a href="meditation.html" class="mob-2">
+
+                    <div class="mob-div"style="background: linear-gradient(
+                        rgba(0, 0, 0, 0.4),
+                        rgba(0, 0, 0, 0.4)
+                        ),url(/images/habits.jpg); background-size: cover; background-position: center;">
+                        HABITAUATION
+                    </div>
+                </a>
+                <a href="meditation.html" class="mob-3">
+
+                    <div class="mob-div"style="background: linear-gradient(
+                        rgba(0, 0, 0, 0.4),
+                        rgba(0, 0, 0, 0.4)
+                        ),url(/images/chill_music.jpg); background-size: cover; background-position: center;">
+                        CHILL MUSIC
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="buttons">
             <button>Helpline</button>
@@ -85,5 +124,14 @@
         </div>
     </main>    
 </body>
+<script>
+const toggleBtn = document.querySelector('.toggle_btn');
+const links = document.querySelector('.links');
+
+toggleBtn.addEventListener('click', () => 
+{
+  links.classList.toggle('active1');
+});
+</script>
 </html>        
                    
