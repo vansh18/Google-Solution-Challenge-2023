@@ -154,6 +154,11 @@ margin: 0;
   {
     font-weight: 500;
   }
+
+  #hidden-logout
+  {
+    display: none;
+  }
   
     /* ----- RESPONSIVNESS ----- */
 

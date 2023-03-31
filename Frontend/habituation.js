@@ -37,4 +37,5 @@ const links = document.querySelector('.links');
 toggleBtn.addEventListener('click', () => 
 {
   links.classList.toggle('active1');
+  document.getElementById('hidden-logout').style.display = 'flex';
 });
