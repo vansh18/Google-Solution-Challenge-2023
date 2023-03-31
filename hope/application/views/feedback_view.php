@@ -39,9 +39,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <p>Feel free to let us know what can we do better.</p>
     </div>
     <div class="form">
-        <form action="#">
+        <form action="" method="post" id="feedbackForm">
             <textarea name="feedback" id="feedback" cols="25" rows="5" ></textarea>
-            <button type="submit">Send</button>
+            <button type="button" onclick="check();">Send</button>
         </form>
     </div>
 </body>
@@ -55,5 +55,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       document.getElementById('hidden-logout').style.display = 'flex';
     });
 
+    function check()
+    {
+        var form=document.getElementById("feedbackForm");   
+        var feedback = document.getElementById("feedback").value;
+        if(feedback.trim() != "")
+            form.submit();
+    }
 </script>
 </html>
