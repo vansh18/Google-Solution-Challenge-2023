@@ -159,6 +159,11 @@ margin: 0;
   {
     display: none;
   }
+
+  -webkit-scrollbar
+{
+  width: 0px;
+}
   
     /* ----- RESPONSIVNESS ----- */
 

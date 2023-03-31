@@ -143,6 +143,11 @@ form button:hover
     display: none;
 }
 
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
 /* -----RESPONSIVENESS ----- */
 
 @media only screen and (max-width: 786px)

@@ -103,6 +103,11 @@ form
     width: 100%;
     max-width: 500px;
 }
+
+::-webkit-scrollbar
+{
+  width: 0px;
+}
   
 .input_box 
 {

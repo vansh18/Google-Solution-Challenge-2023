@@ -165,6 +165,11 @@ label h6
     border: none;
 }
 
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
 @media only screen and (max-width: 480px) 
 {
     .info-message h1

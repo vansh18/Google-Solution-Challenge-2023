@@ -131,6 +131,11 @@ header
     background: #1973E8;
 }
 
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
 /*  ----- RESPONSIVENESS ----- */
 
 @media only screen and (max-width: 768px) 
