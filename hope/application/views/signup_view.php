@@ -152,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     console.log("success");
                     console.log(response.email);
                     console.log(response.password);
-                    // window.location.href = '<?php echo BASE_URL."home"; ?>'; // Redirect to the home page
+                    window.location.href = '<?php echo BASE_URL."home"; ?>'; // Redirect to the home page
                 } 
                 else {
                     $('#error-message').text("Email already registered, please try a different one!"); // Display error message
