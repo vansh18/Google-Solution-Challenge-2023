@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </a>
 
-            <a href="<?php //echo BASE_URL."chill_music";?>" class="chill-music-a">
+            <a href="<?php echo BASE_URL."chill-music";?>" class="chill-music-a">
                 <div class="box box-4" style="background: linear-gradient(
                     rgba(0, 0, 0, 0.4),
                     rgba(0, 0, 0, 0.4)
