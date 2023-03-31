@@ -58,6 +58,7 @@ $route['validate-user'] = 'login/validate';
 $route['logout'] = 'login/user_logout';
 $route['signup'] = 'login/signup';
 $route['register-user'] = 'login/register_user';
+$route['knowing-you'] = 'login/knowing_you';
 
 $route['home'] = 'home';
 $route['chill-music'] = 'home/chill_music';
