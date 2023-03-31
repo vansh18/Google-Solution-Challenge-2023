@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="input_box">
                         <span>Full Name</span>
                         <ion-icon name="person-outline" class="icon"></ion-icon>
-                        <input type="text" name="full_name" id="name_box" required = "required">
+                        <input type="text" name="full_name" id="name_box" required = "required" autofocus>
                     </div>
 
                     <div class="input_box">

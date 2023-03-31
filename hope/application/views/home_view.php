@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="<?php echo ASSETS.'css/home.css';?>">
-    <title>HOPE | Home</title>
+    <title>HOPE - Home</title>
 </head>
 <body>
     <header>
@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     rgba(0, 0, 0, 0.4)
                     ),url(<?php echo ASSETS.'images/chill_music.jpg';?>);background-size: cover; background-position: center;">CHILL MUSIC</div>
             </a>
-            <a href="#" class="know-more">
+            <a href="<?php echo BASE_URL."about-hope";?>" class="know-more">
                 <div class="box box-5">
                     <h3>HOPE</h3>
                     <p>Know more</p>
@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div class="hope">
                     <h3>HOPE</h3>
-                    <a href="#">Know more</a>
+                    <a href="<?php echo BASE_URL."about-hope";?>">Know more</a>
                 </div>
             </div>
             <div class="mob-container2">
