@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="<?php echo ASSETS.'css/habituation.css';?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo ASSETS.'images/favicon-32x32.png';?>">
   </head>
   <body>
     <header>
