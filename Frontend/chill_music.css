@@ -140,10 +140,21 @@ section
     font-weight: 600;
 }
 
+#hidden-logout
+{
+    display: none;
+}
+
+
 /* ----- RESPONSIVENESS ----- */
 
 @media only screen and (max-width: 600px) 
 {
+    
+    .visible-logout
+    {
+        display: none;
+    }
 
     ul
     {

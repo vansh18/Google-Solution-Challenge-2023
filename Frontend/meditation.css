@@ -159,6 +159,10 @@ margin: 0;
 
   @media only screen and (max-width: 768px) 
   {
+    .logout_btn
+    {
+      display: none;
+    }
     .card 
     {
       width: calc(50% - 1rem);

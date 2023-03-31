@@ -339,6 +339,11 @@ header
     display: none;
 }
 
+#hidden-logout
+{
+    display: none;
+}
+
 /* ----- RESPONSIVENESS ----- */
 
 @media only screen and (max-width: 992px) 
@@ -666,6 +671,9 @@ header
     .buttons
     {
         margin: 5px 3%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .buttons button 

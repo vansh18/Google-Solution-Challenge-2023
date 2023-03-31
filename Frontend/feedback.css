@@ -138,6 +138,62 @@ form button:hover
     color: #1973E8;
 }
 
+#hidden-logout
+{
+    display: none;
+}
+
+/* -----RESPONSIVENESS ----- */
+
+@media only screen and (max-width: 786px)
+{
+    ul
+    {
+        display: none;
+    }
+      
+    .logout_btn
+    {
+        display: none;
+    }
+
+    .active1
+    {
+        position: absolute;
+        background: #5A9BFF;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 80px;
+        right: 35px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+        z-index: 1000;
+    }
+    
+    .active1 li a 
+    {
+        color: #FFF;
+    }
+  
+    .toggle_btn 
+    {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .links li 
+    {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+}
+
 @media only screen and (max-width: 480px) 
 {
     .container h2 
