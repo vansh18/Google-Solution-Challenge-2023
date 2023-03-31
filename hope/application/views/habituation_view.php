@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Habituation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -236,49 +236,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         function getLocalDate(utcTime)
         {
             // Create a new Date object from the datetime string
-            let datetimeString = utcTime;
+            let datetimeString = utcTime.replace("," ,"");
             let datetime = new Date(datetimeString);
-
             // Get the user's local timezone offset in minutes
             let timezoneOffset = new Date().getTimezoneOffset();
-
+            
             // Convert the datetime to the user's local time by adding the timezone offset in minutes
             datetime.setMinutes(datetime.getMinutes() - timezoneOffset);
-
+            
             // Format the datetime into a string with the user's local time
-            let formattedDatetime = datetime.toLocaleString();
-            // console.log(formattedDatetime);
-            let parts = formattedDatetime.split(',');
-            let datePart = parts[0];
-            let timePart = parts[1];
-            let monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            let dateParts = datePart.split('/');
-            let dayNumber = dateParts[0];
-            let monthNumber = dateParts[1];
-            let yearNumber = dateParts[2];
-            let monthName = monthNames[monthNumber-1];
-            let daySuffix;
-            switch (dayNumber) {
-            case 1:
-            case 21:
-            case 31:
-                daySuffix = 'st';
-                break;
-            case 2:
-            case 22:
-                daySuffix = 'nd';
-                break;
-            case 3:
-            case 23:
-                daySuffix = 'rd';
-                break;
-            default:
-                daySuffix = 'th';
-                break;
-            }
-            let finalDate = monthName + ' ' + dayNumber + daySuffix;
-            return finalDate;
-            // Output the formatted datetime string
+            let formattedDatetime = datetime.toDateString();
+            console.log(formattedDatetime);
+            return formattedDatetime.slice(0,-4);
         }
         function getLocalTime(utcTime)
         {
@@ -292,18 +261,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             // Convert the datetime to the user's local time by adding the timezone offset in minutes
             datetime.setMinutes(datetime.getMinutes() - timezoneOffset);
 
-            // Format the datetime into a string with the user's local time
-            let formattedDatetime = datetime.toLocaleString();
-            // console.log(formattedDatetime);
-            let parts = formattedDatetime.split(',');
-            let datePart = parts[0];
-            let timePart = parts[1];
-            let timeParts = timePart.split(':');
-            let hour = timeParts[0]
-            let minute = timeParts[1]
-            let suffix = timeParts[2].split(' ')[1];
-            let finalTime = hour + ": "+minute + ' ' + suffix;
-            return finalTime;
+            return datetime.toLocaleTimeString();
         }
     </script>
   </body>
