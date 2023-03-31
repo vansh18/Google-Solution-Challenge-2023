@@ -8,18 +8,26 @@ class ChatModel extends CI_Model
         $max_past_conv = 15; // Set max chats passed to template
         $file = "./data/".$filename;
         $data = json_decode(file_get_contents($file),true);
-        while(sizeof($data['chat'])>$max_past_conv)
+        if($data != "" && array_key_exists('chat',$data))
         {
-            array_shift($data['chat']);
+            while(sizeof($data['chat'])>$max_past_conv)
+            {
+                array_shift($data['chat']);
+            }
+            return $data['chat'];
         }
-        return $data['chat'];
+        else 
+            return "";
     }
     public function create_template($chat_arr,$input)
     {
         $chat = "";
-        foreach($chat_arr as $convo)
+        if($chat_arr != "")
         {
-            $chat = $chat.sprintf("User:%s\nHope:%s",$convo['user'],$convo['hope']);
+            foreach($chat_arr as $convo)
+            {
+                $chat = $chat.sprintf("User:%s\nHope:%s",$convo['user'],$convo['hope']);
+            }
         }
         $hope_prompt = "You are Hope, an expert in mental health therapy and Cognitive behavioural therapy. 
         1. Greet the client: Begin by greeting the client and asking how they are feeling today. This will set the tone for the session and help the client feel heard and acknowledged.
@@ -67,9 +75,28 @@ class ChatModel extends CI_Model
         $file = "./data/".$filename;
         if(file_exists($file))
         {
-            $data = json_decode(file_get_contents($file),true);
-            array_push($data['chat'],array('user' => $usermsg , 'hope' => $hopemsg));
-            file_put_contents($file,json_encode($data,JSON_PRETTY_PRINT));
+            $raw_data = (file_get_contents($file));
+            $data = "";
+            if(($raw_data) == "")
+            {
+                unlink($file);
+                $data = array('chat' => array(0 => array('user' => $usermsg , 'hope' => $hopemsg)));
+                file_put_contents($file,json_encode($data,JSON_PRETTY_PRINT));
+            }
+            else
+            {
+                $data = json_decode($raw_data,true);
+                if(array_key_exists('chat',$data))
+                {
+                    array_push($data['chat'],array('user' => $usermsg , 'hope' => $hopemsg));
+                    file_put_contents($file,json_encode($data,JSON_PRETTY_PRINT));
+                }
+                else
+                {
+                    $data = array('chat' => array(0 => array('user' => $usermsg , 'hope' => $hopemsg)));
+                    file_put_contents($file,json_encode($data,JSON_PRETTY_PRINT));
+                }
+            }
         }
         else
         {
