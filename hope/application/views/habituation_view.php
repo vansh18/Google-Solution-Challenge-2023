@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
                 <li><a href="<?php echo BASE_URL."meditation";?>">Meditation</a></li>
                 <li><a href="<?php echo BASE_URL."habituation";?>">Habituation</a></li>
-                <li><a href="<?php //echo BASE_URL."chill_music";?>">Chill Music</a></li>
+                <li><a href="<?php echo BASE_URL."chill-music";?>">Chill Music</a></li>
             </ul>
             <a href="<?php echo BASE_URL."logout";?>"><span class="logout_btn">Logout</span></a>
             <div class="toggle_btn">

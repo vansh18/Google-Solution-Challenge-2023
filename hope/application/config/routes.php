@@ -60,7 +60,7 @@ $route['signup'] = 'login/signup';
 $route['register-user'] = 'login/register_user';
 
 $route['home'] = 'home';
-$route['meditation'] = 'home/meditation';
+$route['chill-music'] = 'home/chill_music';
 $route['habituation'] = 'habituation';
 $route['add-habit'] = 'habituation/add_habit';
 $route['delete-habit'] = 'habituation/delete_habit';

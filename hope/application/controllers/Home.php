@@ -17,6 +17,10 @@ class Home extends CI_Controller
     {
         $this->load->view('meditation_view.php');
     }
+    public function chill_music()
+    {
+        $this->load->view("chillmusic_view.php");
+    }
     public function feedback()
     {
         if(!isset($_POST['feedback']))
