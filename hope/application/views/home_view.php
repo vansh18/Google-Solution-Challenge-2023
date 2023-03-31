@@ -38,12 +38,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <section>
             <div class="upper_box">
                 <div class="message">
-                    <div class="greetings"><span id="greet"></span> Vansh
+                    <div class="greetings"><span id="greet"></span> <?php echo $_SESSION['name'];?> 
                         <img src="<?php echo ASSETS.'images/icons/🦆 emoji _waving hand sign_.svg';?>" alt="emoji">
                     </div>
                     <p class="quote">You are the sky, Everything else is just weather.</p>
                 </div>
-                <div class="talk_to_hope"><a href="<?php echo BASE_URL."chat";?>">Talk to HOPE <img src="<?php echo ASSETS.'images/boy.svg';?>" alt="Boy icon"></a></div>
+                <div class="talk_to_hope"><a href="<?php echo BASE_URL."chat";?>">Talk to HOPE <img src="<?php echo ASSETS.'images/Boy.svg';?>" alt="Boy icon"></a></div>
             </div>
         </section>
         <h2 class="just_for_you">Just for you &#58&#41</h2>
