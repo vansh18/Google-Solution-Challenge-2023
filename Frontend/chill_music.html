@@ -41,14 +41,19 @@
 
                 <div class="music-section">
                     <div class="box box-1">
-                        <p>LoFi</p>
-                        <p>Rain Sounds</p>
-                        <p>Concentration</p>
+                        <button id="show-box-button" class="video-button" data-category="category1"><p>LoFi</p></button>
+
+                        <button id="show-box-button" class="video-button" data-category="category2"><p>Rain Sounds</p></button>
+
+                        <button id="show-box-button" class="video-button" data-category="category3"><p>Concentration</p></button>
                     </div>
+                    
                     <div class="box box-2">
-                        <p>Wave</p>
-                        <p>Meditation</p>
-                        <p>Stress Relief</p>
+                        <button id="show-box-button" class="video-button" data-category="category4"><p>Wave</p></button>
+
+                        <button id="show-box-button" class="video-button" data-category="category5"><p>Meditation</p></button>
+
+                        <button id="show-box-button" class="video-button" data-category="category6"><p>Stress Relief</p></button>
                     </div>
                 </div>
             </div>
@@ -58,16 +63,55 @@
                 <img src="/images/man.svg" alt="">
             </div>
         </div>
-
+        <div id="box-container">
+            <div id="box-content">
+                <iframe width="560" height="315" id="video-player" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
     </section>
 </body>
 <script>
 const toggleBtn = document.querySelector('.toggle_btn');
 const links = document.querySelector('.links');
 
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', () => 
+{
   links.classList.toggle('active1');
   document.getElementById('hidden-logout').style.display = 'flex';
 });
+
+const videoButtons = document.querySelectorAll('.video-button');
+const boxContainer = document.getElementById('box-container');
+const videoPlayer = document.getElementById('video-player');
+
+const videoLinks = {
+  category1: 'https://www.youtube.com/embed/jfKfPfyJRdk',
+  category2: 'https://www.youtube.com/embed/mPZkdNFkNps',
+  category3: 'https://www.youtube.com/embed/WPni755-Krg',
+  category4: 'https://www.youtube.com/embed/yLOM8R6lbzg',
+  category5: 'https://www.youtube.com/embed/1ZYbU82GVz4',
+  category6: 'https://www.youtube.com/embed/UkM-FjfN6Mc'
+};
+
+for (let button of videoButtons) 
+{
+  button.addEventListener('click', () => 
+  {
+    const category = button.getAttribute('data-category');
+    const link = videoLinks[category];
+    videoPlayer.setAttribute('src', link);
+    boxContainer.classList.add('visible');
+  });
+}
+
+boxContainer.addEventListener('click', (event) => 
+{
+  if (event.target === boxContainer) 
+  {
+    videoPlayer.setAttribute('src', '');
+    boxContainer.classList.remove('visible');
+  }
+});
+
 </script>
 </html>
