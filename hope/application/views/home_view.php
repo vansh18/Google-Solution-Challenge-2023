@@ -10,23 +10,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="<?php echo ASSETS.'css/home.css';?>">
+    <link rel="icon" type="image/x-icon" href="<?php echo ASSETS.'images/favicon-32x32.png';?>">
     <title>HOPE - Home</title>
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="#">
-                <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="logo">
+                <a href="<?php echo BASE_URL."home";?>">
+                    <img src="<?php echo ASSETS.'images/LOGO_HOME.svg';?>" alt="" srcset="" >
                 </a>
             </div>
             <ul class="links">
-                <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
+            <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
                 <li><a href="<?php echo BASE_URL."meditation";?>">Meditation</a></li>
                 <li><a href="<?php echo BASE_URL."habituation";?>">Habituation</a></li>
                 <li><a href="<?php //echo BASE_URL."chill_music";?>">Chill Music</a></li>
-                </ul>
-                <a href="<?php echo BASE_URL."logout";?>"><span class="person">Logout</span></a>
+                <li id="hidden-logout"><a href="<?php echo BASE_URL."logout";?>">Logout</a></li>
+            </ul>
+            <a href="<?php echo BASE_URL."logout";?>" class="visible-logout"><span class="logout_btn">Logout</span></a>
             <div class="toggle_btn">
                 <ion-icon name="menu-outline"></ion-icon>
             </div>
@@ -36,12 +38,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <section>
             <div class="upper_box">
                 <div class="message">
-                <div class="greetings">Good Morning, <?php echo $_SESSION['name'];?>
-                <img src="<?php echo ASSETS.'images/icons/🦆 emoji _waving hand sign_.svg';?>" alt="emoji">
+                    <div class="greetings"><span id="greet"></span> Vansh
+                        <img src="<?php echo ASSETS.'images/icons/🦆 emoji _waving hand sign_.svg';?>" alt="emoji">
                     </div>
                     <p class="quote">You are the sky, Everything else is just weather.</p>
                 </div>
-                <div class="talk_to_hope"><a href="<?php echo BASE_URL."chat";?>">Talk to HOPE <img src="<?php echo ASSETS.'images/Boy.svg';?>" alt="Boy icon"></a></div>
+                <div class="talk_to_hope"><a href="<?php echo BASE_URL."chat";?>">Talk to HOPE <img src="<?php echo ASSETS.'images/boy.svg';?>" alt="Boy icon"></a></div>
             </div>
         </section>
         <h2 class="just_for_you">Just for you &#58&#41</h2>
@@ -134,7 +136,21 @@ const links = document.querySelector('.links');
 toggleBtn.addEventListener('click', () => 
 {
   links.classList.toggle('active1');
+  document.getElementById('hidden-logout').style.display = 'flex';
 });
+
+var myDate = new Date();
+var hrs = myDate.getHours();
+
+var greet;
+
+if (hrs < 12)
+  greet = 'Good Morning';
+else if (hrs >= 12 && hrs <= 17)
+  greet = 'Good Afternoon';
+else if (hrs >= 17 && hrs <= 24)
+  greet = 'Good Evening';
+
+document.getElementById('greet').innerHTML = greet;
 </script>
-</html>        
-                   
+</html>
