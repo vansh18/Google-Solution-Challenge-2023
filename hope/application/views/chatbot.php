@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="form-container">
             <form class="typing-area">
-                <input type="text" placeholder="Send a message" id="input"/>
+                <input type="text" placeholder="Send a message" id="input"/ autofocus>
                 <input type="hidden" name="chat" value = />
                 <button type="button" id="send"><ion-icon name="send-outline"></ion-icon></button>
             </form>

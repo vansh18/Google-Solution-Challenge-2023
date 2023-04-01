@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <div class="form">
         <form action="" method="post" id="feedbackForm">
-            <textarea name="feedback" id="feedback" cols="25" rows="5" ></textarea>
+            <textarea name="feedback" id="feedback" cols="25" rows="5" autofocus></textarea>
             <button type="button" onclick="check();">Send</button>
         </form>
     </div>
