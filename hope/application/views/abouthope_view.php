@@ -70,12 +70,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <img src="<?php echo ASSETS.'images/ameya.jpg';?>" alt="">
                      </div>
                      <div class="details">
-                       <div class="name">Ameya Navare</div>
-                       <div class="job"></div>
+                        <div class="name">Ameya Navare</div>
+                        <div class="job">Cloud SQL</div>
                      </div>
                      <div class="media-icons">
-                       <a target="_blank" href="" class="icon1"></ion-icon></a>
-                       <a target="_blank" href="" class="icon1"></ion-icon></a>
+                     <a href="https://www.linkedin.com/in/ameya-navare-12b956270/"><ion-icon name="logo-linkedin" class="icon1"></ion-icon></a>
+                      <a href="https://github.com/Ameya-Nav"><ion-icon name="logo-github" class="icon1"></ion-icon></a>
                      </div>
                    </div>
                   </div>
@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      </div>
                      <div class="details">
                        <div class="name">Rahul Sumbly</div>
-                       <div class="job"></div>
+                       <div class="job">Backend Developer</div>
                      </div>
                      <div class="media-icons">
                        <a target="_blank" href="https://www.linkedin.com/in/rahul-sumbly/"><ion-icon name="logo-linkedin"><ion-icon name="logo-linkedin" class="icon1"></ion-icon></a>

@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="buttons">
                 <button type = "button" id = "clear-btn"><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
                 <button type = "button" onclick="window.location.href = '<?php echo BASE_URL.'home';?>';"><ion-icon name="caret-back-outline" class="icon"></ion-icon>Return</button>
-                <button type = "button"><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
+                <button type = "button" onclick="window.location.href = '<?php echo BASE_URL.'feedback';?>';"><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
             </div>
         </div>
 
