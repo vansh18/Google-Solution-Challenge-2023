@@ -74,5 +74,6 @@ $route['begin-chat'] = 'welcome/start_chat';
 $route['upload-file'] = 'storage/upload_file';
 $route['get-file'] = 'storage/get_file';
 
+$route['helpline'] = 'home/helpline';
 $route['feedback'] = 'home/feedback';
 $route['about-hope'] = 'home/about_hope';

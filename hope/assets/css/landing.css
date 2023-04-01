@@ -63,6 +63,11 @@ header
     color: #1973E8;
 }
 
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
 .buttons #login
 {
     background: none;

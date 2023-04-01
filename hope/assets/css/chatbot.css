@@ -206,6 +206,7 @@ input:focus, textarea:focus, select:focus
     z-index: 100;
     width: 60%;
     flex: revert;
+    justify-content: space-between;
   }
 
   .left-box .buttons button
@@ -223,7 +224,7 @@ input:focus, textarea:focus, select:focus
 
   #close-icon
   {
-    font-size: 60px;
+    font-size: 40px;
     color: #1973E8;
   }
 

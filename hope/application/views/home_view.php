@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
             </div>
             <ul class="links">
-            <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
+                <li><a href="<?php echo BASE_URL."home";?>">Home</a></li>
                 <li><a href="<?php echo BASE_URL."meditation";?>">Meditation</a></li>
                 <li><a href="<?php echo BASE_URL."habituation";?>">Habituation</a></li>
                 <li><a href="<?php echo BASE_URL."chill-music";?>">Chill Music</a></li>
@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         HABITAUATION
                     </div>
                 </a>
-                <a href="<?php //echo BASE_URL."chill_music";?>" class="mob-3">
+                <a href="<?php echo BASE_URL."chill-music";?>" class="mob-3">
 
                     <div class="mob-div"style="background: linear-gradient(
                         rgba(0, 0, 0, 0.4),
@@ -123,8 +123,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
         <div class="buttons">
-            <button class="button">Helpline</button>
-            <button class="button">Contact a counsellor</button>
+            <button class="button" onclick = "window.location.href = '<?php echo BASE_URL.'helpline';?>'">Helpline</button>
+            <button class="button" onclick = "openLink('https://www.google.com/search?q=counsellor+near+me');">Contact a counsellor</button>
             <a href="<?php echo BASE_URL."feedback";?>" class="button">Give feedback</a>
         </div>
     </main>    
@@ -152,5 +152,10 @@ else if (hrs >= 17 && hrs <= 24)
   greet = 'Good Evening';
 
 document.getElementById('greet').innerHTML = greet;
+
+function openLink(url) {
+            window.open(
+            url, "_blank");
+        }
 </script>
 </html>

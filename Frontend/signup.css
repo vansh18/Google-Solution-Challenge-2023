@@ -201,6 +201,19 @@ form
     color: #1973E8;
 }
 
+.container #error-message
+{
+    margin: 20px 0 0 0;
+    background: #EDCADA;
+    color: #FC2947;
+    padding: 10px 10px 10px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    display: none;
+    max-width: 200px;
+}
+
 /* ----- RESPONSIVENESS ----- */
 
 @media screen and (max-width: 768px) 
