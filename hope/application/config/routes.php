@@ -61,6 +61,7 @@ $route['register-user'] = 'login/register_user';
 $route['knowing-you'] = 'login/knowing_you';
 
 $route['home'] = 'home';
+$route['meditation'] = 'home/meditation';
 $route['chill-music'] = 'home/chill_music';
 $route['habituation'] = 'habituation';
 $route['add-habit'] = 'habituation/add_habit';
