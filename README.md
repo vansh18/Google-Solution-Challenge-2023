@@ -68,7 +68,7 @@
 ### Table name: feedback
 ![](https://github.com/Rahul-s-007/Google-Solution-Challenge-2023/blob/main/doc_imgs/feedback_table.png)
 
-### *Contributors - [Alan Mohan](https://www.linkedin.com/in/alan-mohan8/), [Vansh Gupta](https://www.linkedin.com/in/vansh-gupta-1557ab1ba/), Ameya Navare(https://www.linkedin.com/in/ameya-navare-12b956270/), [Rahul Sumbly](https://www.linkedin.com/in/rahul-sumbly/)*
+### *Contributors - [Alan Mohan](https://www.linkedin.com/in/alan-mohan8/), [Vansh Gupta](https://www.linkedin.com/in/vansh-gupta-1557ab1ba/), [Ameya Navare](https://www.linkedin.com/in/ameya-navare-12b956270/), [Rahul Sumbly](https://www.linkedin.com/in/rahul-sumbly/)*
 
 #### Note: 
 * 'doc_imgs' folder has no use in execution of code and is only used for README.md file*
