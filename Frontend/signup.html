@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+    <title>SignUp</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="/images/LOGO_HOME.svg" alt="" srcset="" >
+            </a>
+        </div>
+    </header>
+    <section>
+        <div class="rocket">
+            <img src="/images/rocket.svg" alt="">
+        </div>
+        <div class="login_box">
+            <h1>Sign Up</h1>
+            <p>Join us on the journey to better mental health. Sign up today and take the first step.</p>
+            <div class="container">
+                <form action="" autocomplete="off">
+
+                    <div class="input_box">
+                        <span>Full Name</span>
+                        <ion-icon name="person-outline" class="icon"></ion-icon>
+                        <input type="text" name="full_name" required = "required">
+                    </div>
+
+                    <div class="input_box">
+                        <span>Email</span>
+                        <ion-icon name="mail-outline" class="icon"></ion-icon>
+                        <input type="email" name="email" required = "required">
+                    </div>
+
+                    <div class="input_box">
+                        <span>Password</span>
+                        <div onclick="changeInputType()" id="eye" class="eye">
+                            <ion-icon id="password-icon" name="eye-off-outline"></ion-icon>
+                        </div>
+                        <ion-icon name="key-outline" class="icon"></ion-icon>
+                        <input type="password" name="password" id="password_box" required = "required">
+                    </div>
+
+                    <div class="forgot_password">
+                        <span>Have an account?</span><a href="login.html">Login</a>
+                    </div>
+                    <button type="submit" class="submit_button">Get Started</button>
+                    <div id="error-message" class="error-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+        <script>
+            function changeInputType() 
+        {
+        var passwordInput = document.getElementById("password_box");
+        var passwordIcon = document.getElementById("password-icon"); 
+        if (passwordInput.type === "password") 
+        {
+            passwordInput.type = "text";
+            passwordIcon.name = "eye-outline"; 
+        } 
+        else 
+        {
+            passwordInput.type = "password";
+            passwordIcon.name = "eye-off-outline"; 
+        }
+        }
+        </script>
+    </body>
+</html>

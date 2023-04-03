@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;627&family=Chelsea+Market&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    /* outline: 1px solid black !important; */
+}
+  
+body 
+{
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.5;
+    background: #DAE6F2;
+}
+
+  a 
+  {
+    text-decoration: none;
+    font-weight: 600;
+    color: #3C2A21;
+  }
+  
+  ul 
+  {
+    list-style: none;
+  }
+  
+  /* HEADER */
+  
+header 
+{
+    padding: 1rem;
+}
+  
+.navbar 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.logo img 
+{
+    height: 50px;
+}
+  
+.links
+{
+  margin: 0;
+}
+
+.links li 
+{
+    display: inline-block;
+    margin-right: 1rem;
+}
+  
+.logout_btn 
+{
+    display: inline-block;
+    color: #3C2A21;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.toggle_btn 
+{
+    display: none;
+}
+
+  .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5rem auto 0 auto;
+}
+
+.form form 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+form 
+{
+    width: 400px;
+    min-height: 80px;
+    border-radius: 10px;
+    border: none;
+    overflow: auto;
+    margin: 1.5rem auto 1rem auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    resize: none;
+}
+
+textarea
+{
+    border-radius: 10px;
+    font-size: 1rem;
+    border: none;
+    color: #000;
+    padding: 10px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    resize: none;
+    font-weight: 500;
+}
+
+form button
+{
+    width: 120px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    background: #1973E8;
+    border: 2px solid #1973E8;
+    font-size: 1rem;
+    color: #FFF;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+form button:hover
+{
+    background: #FFFFFF;
+    color: #1973E8;
+}
+
+#hidden-logout
+{
+    display: none;
+}
+
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
+/* -----RESPONSIVENESS ----- */
+
+@media only screen and (max-width: 786px)
+{
+    ul
+    {
+        display: none;
+    }
+      
+    .logout_btn
+    {
+        display: none;
+    }
+
+    .active1
+    {
+        position: absolute;
+        background: #5A9BFF;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 80px;
+        right: 35px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+        z-index: 1000;
+    }
+    
+    .active1 li a 
+    {
+        color: #FFF;
+    }
+  
+    .toggle_btn 
+    {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .links li 
+    {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) 
+{
+    .container h2 
+    {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .container p  
+    {
+        font-size: .9rem;
+    }
+
+    textarea 
+    {
+        width: 60%;
+        margin: auto;
+    }
+}

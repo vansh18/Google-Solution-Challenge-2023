@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;627&family=Chelsea+Market&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+  /* outline: 1px solid black !important; */
+}
+
+body 
+{
+  font-family: 'Open Sans';
+  font-size: 16px;
+  line-height: 1.5;
+  background: #F0E2CA;
+}
+
+a 
+{
+  text-decoration: none;
+  font-weight: 600;
+  color: #3C2A21;
+}
+
+ul 
+{
+  list-style: none;
+}
+
+/* HEADER */
+
+header 
+{
+  padding: 1rem;
+}
+
+.navbar 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img 
+{
+  height: 50px;
+}
+
+.links
+{
+margin: 0;
+}
+
+.links li 
+{
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.logout_btn 
+{
+  display: inline-block;
+  color: #3C2A21;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.toggle_btn 
+{
+  display: none;
+}
+  
+  /* ----- MAIN SECTION ----- */
+  
+  section 
+  {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .greeting-message 
+  {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .greeting-message h1 
+  {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cards 
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card 
+  {
+    width: calc(33.33% - 1rem);
+    background-color: #F0D6BB;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
+  
+  .card-img
+  {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card img 
+  {
+    max-width: 75%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .img1
+  {
+    margin-bottom: 6.5px;
+  }
+
+  .card h4 
+  {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card ul 
+  {
+    margin-bottom: 1rem;
+  }
+  
+  .card ul li 
+  {
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content button
+  {
+    color: #3C2A21;
+    background: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+
+  .greeting-message p 
+  {
+    font-weight: 500;
+  }
+
+  #hidden-logout
+  {
+    display: none;
+  }
+
+  -webkit-scrollbar
+{
+  width: 0px;
+}
+
+#box-container 
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -150%) translateY(-100%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid black;
+  padding: 360px 660px;
+  transition: transform 0.5s ease-in-out;
+}
+
+#box-container.visible 
+{
+  transform: translate(-50%, -50%);
+}
+
+#box-content
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+    /* ----- RESPONSIVNESS ----- */
+
+    @media only screen and (max-width: 1366px) 
+  {
+    body 
+    {
+      font-size: 16px;
+    }
+
+    .greeting-message
+    {
+        margin: 0;
+    }
+
+    .greeting-message h1 
+    {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .greeting-message p 
+    {
+        font-size: 1rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    section
+    {
+      margin-top: 0;
+      padding-top: 0;
+      height: calc(100vh - 150px);
+    }
+  }
+
+  @media only screen and (max-width: 768px) 
+  {
+    .logout_btn
+    {
+      display: none;
+    }
+    .card 
+    {
+      width: calc(50% - 1rem);
+    }
+
+    .card img
+    {
+        margin-bottom: 0;
+    }
+
+    .cards
+    {
+        gap: 15px;
+        justify-content: center;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) 
+  {
+    .back_btn
+    {
+        display: none;
+    }
+
+    .links 
+    {
+        display: none;
+    }
+      
+    .active
+    {
+        position: absolute;
+        background: #3c2a21;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 80px;
+        right: 35px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    
+    .active li a 
+    {
+        color: #F0D6BB;
+    }
+  
+    .toggle_btn 
+    {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    .links li 
+    {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    iframe
+    {
+      width: 460px;
+      height: 215px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) 
+  {
+    .card 
+    {
+      width: 100%;
+    }
+
+    .card-content h3
+    {
+        text-align: center;
+    }
+    
+    .back_btn
+    {
+        display: none;
+    }
+
+    iframe
+    {
+      width: 360px;
+      height: 200px;
+    }
+  }

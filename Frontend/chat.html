@@ -7,11 +7,16 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="chat.css">
-    <title>ChatBot</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+    <title>HOPE | Chat</title>
 </head>
 <body>
     <section>
+
         <div class="left-box">
+            <div class="close-button">
+                <ion-icon name="close-outline" id="close-icon"></ion-icon>
+            </div>
             <img src="/Images/Logo.svg" alt="">
             <div class="buttons">
                 <button><ion-icon name="close-circle-outline" class="icon"></ion-icon>End Session</button>
@@ -19,8 +24,27 @@
                 <button><ion-icon name="megaphone-outline" class="icon"></ion-icon>Report an Issue</button>
             </div>
         </div>
+        
+        <div class="mob-header">
+            <div class="toggle_btn">
+                <ion-icon name="menu-outline" id="menu-icon"></ion-icon>
+            </div>
+            <img src="/images/LOGO_HOME.svg" alt="">
+        </div>
+
         <div class="right-box">
             <div class="chat-box">
+                <div class="chat outgoing">
+                    <div class="details">
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
+                    </div>
+                </div>
+                 <div class="chat incoming">
+                    <div class="details">
+                        <p>Hi</p>
+                    </div>
+                </div>
+                <!--
                 <div class="chat outgoing">
                     <div class="details">
                         <p>HOPE: Hi Vansh, How can I help you today.</p>
@@ -33,42 +57,86 @@
                 </div>
                 <div class="chat outgoing">
                     <div class="details">
-                        <p>HOPE: Hi, it sounds like you're feeling a lot of anxiety about your upcoming exams. I want to assure you that you can do this! </p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>HOPE: There are a few things that you can do to help manage your anxiety around your exams. First, it is important to develop a study plan and stick to it. This will help you feel more prepared and in control. Additionally, make sure to take breaks and allow yourself time to relax.</p>
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
                     </div>
                 </div>
                 <div class="chat incoming">
                     <div class="details">
-                        <p>Thanks Hope I will follow that and will be back if I need something.</p>
+                        <p>I am worried as I have my exams in a few weeks.</p>
                     </div>
                 </div>
                 <div class="chat outgoing">
                     <div class="details">
-                        <p>HOPE: Always a pleasure Vansh. Let me know if you need something.</p>
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
                     </div>
                 </div>
                 <div class="chat incoming">
                     <div class="details">
-                        <p>That's all for now. Bye!</p>
+                        <p>I am worried as I have my exams in a few weeks.</p>
                     </div>
                 </div>
                 <div class="chat outgoing">
                     <div class="details">
-                        <p>HOPE: Bye Vansh, Have a nice day.</p>
+                        <p>HOPE: Hi Vansh, How can I help you today.</p>
                     </div>
                 </div>
+                <div class="chat incoming">
+                    <div class="details">
+                        <p>I am worried as I have my exams in a few weeks. test test</p>
+                    </div>
+                </div> -->
             </div>
+
             <div class="form-container">
                 <form action="#" class="typing-area">
-                    <input type="text" placeholder="">
+                    <input type="text" autofocus = "True">
                     <button><ion-icon name="send-outline"></ion-icon></button>
                 </form>
             </div>
         </div>
     </section>
+
 </body>
+<script>
+    window.onload = function() 
+    {
+        var chatBox = document.querySelector('.chat-box');
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    var chatBox = document.querySelector('.chat-box');
+
+    function scrollChatBox() 
+    {
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    var menu_icon = document.getElementById("menu-icon");
+    var close_icon = document.getElementById("close-icon");
+
+    menu_icon.addEventListener("click", function() 
+        {
+            if (menu_icon.name == "menu-outline") 
+            {
+                document.querySelector(".left-box").style.display = "flex";
+            }
+        });
+    close_icon.addEventListener("click", function() 
+    {
+        if (close_icon.name == "close-outline") 
+        {
+            document.querySelector(".left-box").style.display = "none";
+        }
+    });
+
+
+    window.addEventListener('resize', function() 
+    {
+        if (document.activeElement.tagName == 'text-area') 
+        {
+            var chatBox = document.querySelector('.chat-box');
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    });
+</script>
 </html>

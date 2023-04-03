@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;627&family=Chelsea+Market&family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+*,*::after,*::before
+{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    /* outline: 1px solid black !important; */
+}
+
+body
+{
+    height: 100vh;
+    background: #EAF2FF;
+}
+
+.logo a img
+{
+    width: 150px;
+    height: 70px;
+}
+
+header
+{
+    position: relative;
+    padding: .5rem 2rem;
+}
+
+.navbar
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons a
+{
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    background: #1973E8;
+    margin: 0px 10px;
+    padding: 8px 10px;
+    width: 110px;
+    border: 3px solid #1973E8;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+}
+
+.buttons a:hover
+{
+    background: #FFFFFF;
+    color: #1973E8;
+}
+
+::-webkit-scrollbar
+{
+  width: 0px;
+}
+
+.buttons #login
+{
+    background: none;
+    border: 3px solid #1973E8;
+    color: #1973E8;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.buttons #login:hover
+{
+    background: #1973E8;
+    color: #FFFFFF;
+}
+
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .content
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+.content .msg
+{
+    display: inline-block;
+    background: #BFD8FF;
+    color: #1973E8;
+    width: 260px;
+    border-radius: 15px;
+    border: none;
+    margin: 0 0 10px 80px;
+}
+
+.content .msg p
+{
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.content .heading
+{
+    margin: 10px 0 10px 80px;
+    line-height: 45px;
+    max-width: 400px;
+    font-size: 24px;
+}
+
+.content .para
+{
+    margin: 10px 0 0 80px;
+    max-width: 320px;
+    color: #666666;
+    font-weight: 500;
+}
+
+.content .button
+{
+    width: 160px;
+    margin: 20px 0 0 80px;
+}
+
+.content .button a
+{
+    text-decoration: none;
+    padding: 8px 30px;
+    background: #1973E8;
+    width: 180px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 3px solid #1973E8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.content .button a:hover
+{
+    background: #FFFFFF;
+    color: #1973E8;
+}
+
+section > .image
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.image img
+{
+    width: 445px;
+    height: 445px;
+}
+
+.mob-buttons
+{
+    display: none;
+}
+
+/*  ----- RESPONSIVENESS ----- */
+
+@media only screen and (max-width: 500px) 
+{
+
+    .logo a img
+    {
+        width: 120px;
+        height: 60px;
+    }
+    section
+    {
+        width: 100%;
+    }
+
+    section .content
+    {
+        margin: 10px;
+    }
+
+    section .image
+    {
+        padding: 0;
+    }
+
+    section .image img
+    {
+        width: 350px;
+        height: 350px;
+    }
+
+    .buttons
+    {
+        display: none;
+    }
+
+    .button
+    {
+        display: none;
+    }
+
+    .content .msg
+    {
+        margin-left: 0;
+        font-size: 14px;
+        width: 220px;
+    }
+
+    .content .heading
+    {
+        font-size: 20px;
+        margin: 5px 0 0 0;
+    }
+    
+    .content .para
+    {
+        margin: 5px 0 0 0;
+    }
+    
+    .mob-buttons
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .mob-buttons a
+    {
+        color: #FFFFFF;
+        text-align: center;
+        text-decoration: none;
+        background: #1973E8;
+        margin: 0px 10px 0 0;
+        padding: 8px 10px;
+        width: 110px;
+        border: 3px solid #1973E8;
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: .3s ease-in-out;
+    }
+    
+    .mob-buttons a:hover
+    {
+        background: #FFFFFF;
+        color: #1973E8;
+    }
+    
+    .mob-buttons #login
+    {
+        background: none;
+        border: 3px solid #1973E8;
+        color: #1973E8;
+        border-radius: 7px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    
+    .mob-buttons #login:hover
+    {
+        background: #1973E8;
+        color: #FFFFFF;
+    }
+}

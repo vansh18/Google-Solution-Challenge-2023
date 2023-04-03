@@ -49,9 +49,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['get-output'] = 'welcome/get_output';
-$route['chat'] = 'welcome/call_chat';
+
+$route['login'] = 'login/user_login';
+$route['validate-user'] = 'login/validate';
+$route['logout'] = 'login/user_logout';
+$route['signup'] = 'login/signup';
+$route['register-user'] = 'login/register_user';
+$route['knowing-you'] = 'login/knowing_you';
+
+$route['home'] = 'home';
+$route['meditation'] = 'home/meditation';
+$route['chill-music'] = 'home/chill_music';
+$route['habituation'] = 'habituation';
+$route['add-habit'] = 'habituation/add_habit';
+$route['delete-habit'] = 'habituation/delete_habit';
+$route['reset-habit'] = 'habituation/reset_habit';
+
+$route['get-output'] = 'chat/get_chat';
+$route['chat'] = 'chat/call_chat';
 $route['begin-chat'] = 'welcome/start_chat';
+
+$route['upload-file'] = 'storage/upload_file';
+$route['get-file'] = 'storage/get_file';
+
+$route['helpline'] = 'home/helpline';
+$route['feedback'] = 'home/feedback';
+$route['about-hope'] = 'home/about_hope';
