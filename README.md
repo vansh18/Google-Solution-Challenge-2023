@@ -26,7 +26,7 @@
 * [Meditation](#meditation)
 * [Chill Music](#chill-music)
 * [Know More Page](#know-more-page)
-
+* [MySQL Table Structures](#mysql-table-structures)
 ## Landing Page:
 ### Greated by this page when you first visit [hope-cbt.site](http://hope-cbt.site)
 ![](https://github.com/Rahul-s-007/Google-Solution-Challenge-2023/blob/main/doc_imgs/login_signup.png)
@@ -59,14 +59,17 @@
 
 ## MySQL Table Structures:
 
-### Table name: table1
-(*insert image here)
-![](Documentation%20Images/userdatatable.jpg)
+### Table name: user_data
+![](https://github.com/Rahul-s-007/Google-Solution-Challenge-2023/blob/main/doc_imgs/user_table.png)
 
-### Table name: table2
-(*insert image here)
-![](Documentation%20Images/userdatatable.jpg)
+### Table name: habituation
+![](https://github.com/Rahul-s-007/Google-Solution-Challenge-2023/blob/main/doc_imgs/habituation_table.png)
+
+### Table name: feedback
+![](https://github.com/Rahul-s-007/Google-Solution-Challenge-2023/blob/main/doc_imgs/feedback_table.png)
 
 ### *Contributors - [Rahul Sumbly](https://www.linkedin.com/in/rahul-sumbly/), [Alan Mohan](https://www.linkedin.com/in/alan-mohan8/), [Vansh Gupta](https://www.linkedin.com/in/vansh-gupta-1557ab1ba/), Ameya Navare*
 
-#### Note: * 'doc_imgs' folder has no use in execution of code and is only used for README.md file*
+#### Note: 
+* 'doc_imgs' folder has no use in execution of code and is only used for README.md file*
+* 'file_rw' folder has no use in execution of code and is only used for testing and prototyping*
