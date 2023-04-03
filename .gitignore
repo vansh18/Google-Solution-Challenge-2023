@@ -1,3 +1,4 @@
 .env
 file_rw\input.txt
 file_rw\output.txt
+virtualenvcommands.txt
